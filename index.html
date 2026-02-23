@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PsyTeeth — Your Teeth Know the Truth About Parental Alienation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #F5F0E8;
+    --cream: #EDE6D6;
+    --warm-white: #FAF7F2;
+    --charcoal: #1C1C1C;
+    --graphite: #3A3A3A;
+    --muted: #7A7268;
+    --rust: #B85C38;
+    --rust-light: #D4724F;
+    --sage: #5C7A6B;
+    --bone: #D4CFC5;
+    --tooth-yellow: #E8DFC8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--warm-white);
+    color: var(--charcoal);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    background: var(--charcoal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 80px 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-left::after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    background: var(--charcoal);
+    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
+  }
+
+  .hero-right {
+    background: var(--ivory);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 80px 80px 100px;
+    position: relative;
+  }
+
+  .tooth-graphic {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.06;
+    font-size: 320px;
+    line-height: 1;
+    user-select: none;
+    color: var(--charcoal);
+  }
+
+  .domain-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .domain-tag::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--rust);
+  }
+
+  h1 {
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--ivory);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--rust-light);
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    color: var(--bone);
+    max-width: 400px;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 48px;
+  }
+
+  .scroll-hint {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+
+  .scroll-hint::after {
+    content: '↓';
+    font-size: 16px;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  .hero-right h2 {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 300;
+    color: var(--graphite);
+    line-height: 1.4;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-right h2 strong {
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .hero-right p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 420px;
+    margin-bottom: 48px;
+  }
+
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--charcoal);
+    color: var(--ivory);
+    text-decoration: none;
+    padding: 18px 36px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 1px solid var(--charcoal);
+    cursor: pointer;
+  }
+
+  .cta-primary:hover {
+    background: var(--rust);
+    border-color: var(--rust);
+  }
+
+  /* SECTION STYLES */
+  section {
+    padding: 100px 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--rust);
+  }
+
+  /* CONCEPT SECTION */
+  .concept {
+    background: var(--cream);
+  }
+
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .concept h2 {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    color: var(--charcoal);
+  }
+
+  .concept h2 em {
+    font-style: italic;
+    color: var(--rust);
+  }
+
+  .concept p {
+    color: var(--graphite);
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+  .concept-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .concept-card {
+    background: var(--warm-white);
+    border-left: 3px solid var(--rust);
+    padding: 28px 32px;
+    transition: transform 0.3s ease;
+  }
+
+  .concept-card:hover {
+    transform: translateX(6px);
+  }
+
+  .concept-card .tooth-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--rust);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .concept-card h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--charcoal);
+  }
+
+  .concept-card p {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* MECHANISM */
+  .mechanism {
+    background: var(--charcoal);
+    color: var(--ivory);
+  }
+
+  .mechanism h2 {
+    font-size: clamp(28px, 3.5vw, 46px);
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    max-width: 700px;
+  }
+
+  .mechanism h2 em {
+    font-style: italic;
+    color: var(--rust-light);
+  }
+
+  .mechanism > .container > p {
+    color: var(--bone);
+    font-size: 17px;
+    max-width: 600px;
+    margin-bottom: 64px;
+    line-height: 1.85;
+  }
+
+  .mechanism-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--graphite);
+  }
+
+  .step {
+    background: var(--charcoal);
+    padding: 48px 36px;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+
+  .step:hover {
+    background: #242424;
+  }
+
+  .step-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--graphite);
+    line-height: 1;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .step h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--ivory);
+    margin-bottom: 16px;
+  }
+
+  .step p {
+    font-size: 15px;
+    color: var(--bone);
+    line-height: 1.75;
+  }
+
+  .step p strong {
+    color: var(--rust-light);
+    font-weight: 400;
+  }
+
+  /* QUESTIONNAIRE SECTION */
+  .questionnaires {
+    background: var(--warm-white);
+  }
+
+  .questionnaires h2 {
+    font-size: clamp(28px, 3.5vw, 46px);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .questionnaires > .container > p {
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 64px;
+    max-width: 580px;
+    line-height: 1.8;
+  }
+
+  .quiz-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid var(--bone);
+  }
+
+  .quiz-tab {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    cursor: pointer;
+    color: var(--muted);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.25s ease;
+  }
+
+  .quiz-tab.active {
+    color: var(--charcoal);
+    border-bottom-color: var(--rust);
+  }
+
+  .quiz-tab:hover {
+    color: var(--charcoal);
+  }
+
+  .quiz-panel {
+    display: none;
+    padding: 48px 0;
+  }
+
+  .quiz-panel.active {
+    display: block;
+  }
+
+  .quiz-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--bone);
+  }
+
+  .quiz-info h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--charcoal);
+  }
+
+  .quiz-info .meta-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .meta-item {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    display: flex;
+    gap: 12px;
+  }
+
+  .meta-item span:first-child {
+    color: var(--rust);
+    min-width: 80px;
+  }
+
+  .quiz-instructions {
+    background: var(--cream);
+    padding: 28px 32px;
+    border-left: 3px solid var(--sage);
+  }
+
+  .quiz-instructions p {
+    font-size: 15px;
+    color: var(--graphite);
+    line-height: 1.75;
+  }
+
+  .quiz-instructions strong {
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .question-item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--cream);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 32px;
+    transition: background 0.2s ease;
+  }
+
+  .question-item:hover {
+    background: var(--cream);
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 -16px;
+    border-radius: 2px;
+  }
+
+  .question-text {
+    font-size: 17px;
+    color: var(--graphite);
+    font-style: italic;
+  }
+
+  .question-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    margin-right: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .rating-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .rating-input input[type="number"] {
+    width: 64px;
+    height: 44px;
+    text-align: center;
+    border: 1px solid var(--bone);
+    background: var(--warm-white);
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
+    color: var(--charcoal);
+    outline: none;
+    transition: border-color 0.25s ease;
+    -moz-appearance: textfield;
+  }
+
+  .rating-input input[type="number"]::-webkit-outer-spin-button,
+  .rating-input input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .rating-input input:focus {
+    border-color: var(--rust);
+  }
+
+  .rating-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--bone);
+    letter-spacing: 0.1em;
+  }
+
+  .section-divider {
+    margin: 40px 0 32px;
+    padding-top: 32px;
+    border-top: 2px solid var(--charcoal);
+  }
+
+  .section-divider h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 20px;
+  }
+
+  .bonus-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .bonus-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--cream);
+  }
+
+  .bonus-item label {
+    font-size: 16px;
+    color: var(--graphite);
+    font-style: italic;
+    flex: 1;
+    cursor: pointer;
+  }
+
+  .bonus-item .checkbox-group {
+    display: flex;
+    gap: 16px;
+  }
+
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    cursor: pointer;
+    font-style: normal;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    accent-color: var(--rust);
+    width: 14px;
+    height: 14px;
+  }
+
+  .score-panel {
+    margin-top: 48px;
+    background: var(--cream);
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .score-display {
+    text-align: center;
+  }
+
+  .score-number {
+    font-size: 96px;
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1;
+    font-family: 'Cormorant Garamond', serif;
+    transition: color 0.5s ease;
+  }
+
+  .score-max {
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+  }
+
+  .score-bar {
+    margin-top: 20px;
+    height: 4px;
+    background: var(--bone);
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .score-bar-fill {
+    height: 100%;
+    background: var(--rust);
+    width: 0%;
+    transition: width 0.8s ease;
+  }
+
+  .score-interpretation {
+    padding-left: 48px;
+    border-left: 1px solid var(--bone);
+  }
+
+  .score-interpretation h4 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--charcoal);
+  }
+
+  .score-interpretation p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  .calc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--rust);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.25s ease;
+    margin-top: 32px;
+  }
+
+  .calc-btn:hover {
+    background: var(--charcoal);
+  }
+
+  /* RESEARCH STATS */
+  .stats {
+    background: var(--cream);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: var(--bone);
+    margin-top: 60px;
+  }
+
+  .stat-item {
+    background: var(--cream);
+    padding: 40px 28px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: -0.03em;
+  }
+
+  .stat-number em {
+    font-style: normal;
+    color: var(--rust);
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* DIAGNOSIS CTA */
+  .diagnosis-cta {
+    background: var(--charcoal);
+    padding: 120px 0;
+  }
+
+  .cta-inner {
+    max-width: 800px;
+  }
+
+  .diagnosis-cta h2 {
+    font-size: clamp(32px, 4vw, 54px);
+    font-weight: 300;
+    color: var(--ivory);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+  .diagnosis-cta h2 em {
+    font-style: italic;
+    color: var(--rust-light);
+  }
+
+  .diagnosis-cta p {
+    color: var(--bone);
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    max-width: 600px;
+  }
+
+  .diagnosis-cta .fine-print {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 48px;
+  }
+
+  .cta-group {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .cta-secondary {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.25s ease;
+  }
+
+  .cta-secondary:hover {
+    color: var(--ivory);
+  }
+
+  /* ABOUT */
+  .about {
+    background: var(--ivory);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-left {
+    position: sticky;
+    top: 40px;
+  }
+
+  .about-name {
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  .about-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--rust);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .about-left p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .about-right h2 {
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+
+  .about-right p {
+    color: var(--graphite);
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+
+  .about-right p strong {
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  /* FOOTER */
+  footer {
+    background: #141414;
+    padding: 60px 0 40px;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .footer-logo {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--ivory);
+    letter-spacing: -0.01em;
+  }
+
+  .footer-logo span {
+    color: var(--rust);
+  }
+
+  .footer-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #2A2A2A;
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-bottom p {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #444;
+    letter-spacing: 0.08em;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-left > * {
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  .hero-left > *:nth-child(1) { animation-delay: 0.1s; opacity: 0; }
+  .hero-left > *:nth-child(2) { animation-delay: 0.25s; opacity: 0; }
+  .hero-left > *:nth-child(3) { animation-delay: 0.4s; opacity: 0; }
+  .hero-left > *:nth-child(4) { animation-delay: 0.55s; opacity: 0; }
+
+  .hero-right > * {
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  .hero-right > *:nth-child(1) { animation-delay: 0.3s; opacity: 0; }
+  .hero-right > *:nth-child(2) { animation-delay: 0.45s; opacity: 0; }
+  .hero-right > *:nth-child(3) { animation-delay: 0.6s; opacity: 0; }
+  .hero-right > *:nth-child(4) { animation-delay: 0.75s; opacity: 0; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-left {
+      padding: 80px 40px 60px;
+      min-height: 60vh;
+    }
+
+    .hero-left::after { display: none; }
+
+    .hero-right {
+      padding: 60px 40px 80px;
+    }
+
+    .concept-grid,
+    .about-grid,
+    .quiz-header {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .about-left { position: static; }
+
+    .mechanism-steps {
+      grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .score-panel {
+      grid-template-columns: 1fr;
+    }
+
+    .score-interpretation {
+      border-left: none;
+      border-top: 1px solid var(--bone);
+      padding-left: 0;
+      padding-top: 32px;
+    }
+
+    .cta-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 24px; }
+    section { padding: 70px 0; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .score-panel { padding: 32px 24px; }
+    .quiz-tabs { flex-direction: column; border-bottom: none; border-left: 2px solid var(--bone); }
+    .quiz-tab { border-bottom: none; border-left: 2px solid transparent; margin-left: -2px; }
+    .quiz-tab.active { border-left-color: var(--rust); }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="domain-tag">psyteeth.com</div>
+    <h1>Your teeth know <em>who you're protecting.</em></h1>
+    <p class="hero-sub">
+      In families affected by parental alienation, the somatic evidence doesn't disappear. It shows up in the mouth — specifically in the central incisors of the alienated child.
+    </p>
+    <p class="scroll-hint">Take the free self-assessment</p>
+  </div>
+  <div class="hero-right">
+    <div class="tooth-graphic">🦷</div>
+    <div class="section-label">Psychostomatology Research</div>
+    <h2>Five years. <strong>130+ cases.</strong><br>The same pattern — every time.</h2>
+    <p>
+      Parental alienation leaves psychological scars. But it also leaves dental ones. The upper central incisors tell the story of which parent was idealized — and which was erased.
+    </p>
+    <a href="#questionnaires" class="cta-primary">
+      Take the Diagnostic Assessment
+      <span>→</span>
+    </a>
+  </div>
+</section>
+
+<!-- CONCEPT -->
+<section class="concept">
+  <div class="container">
+    <div class="concept-grid">
+      <div>
+        <div class="section-label">The Core Concept</div>
+        <h2>Teeth as <em>somatic markers</em> of psychological separation</h2>
+        <p>
+          Parental alienation doesn't only rewire a child's thinking — it rewires their nervous system. The chronic stress of suppressing identification with the alienated parent creates measurable physiological effects, including in dental tissue.
+        </p>
+        <p>
+          Psychostomatology maps specific teeth to specific relational wounds. The two upper central incisors — teeth 11 and 21 — consistently correlate with the father-wound and the mother-wound respectively.
+        </p>
+        <p>
+          In PAS families, where one parent is systematically demonized, we observe predictable damage patterns in the incisor corresponding to that parent. Not as metaphor. As measurable, repeating clinical observation.
+        </p>
+      </div>
+      <div class="concept-cards">
+        <div class="concept-card">
+          <div class="tooth-num">Tooth 21 · Upper Left Central Incisor</div>
+          <h3>The Mother Pattern</h3>
+          <p>Related to maternal identification, social visibility, and the wound of shame. When the alienating parent is the mother — or when the mother demonizes the father — this tooth shows damage. Primary mask: <em>acceptance</em> (people-pleasing).</p>
+        </div>
+        <div class="concept-card">
+          <div class="tooth-num">Tooth 11 · Upper Right Central Incisor</div>
+          <h3>The Father Pattern</h3>
+          <p>Related to paternal identification, boundary defense, and the wound of helplessness. When the alienating parent is the father, or when paternal identification is suppressed, this tooth is affected. Primary mask: <em>power</em> (false strength).</p>
+        </div>
+        <div class="concept-card" style="border-left-color: var(--sage);">
+          <div class="tooth-num" style="color: var(--sage);">The Critical Discovery</div>
+          <h3>Tooth 11 is more destructive</h3>
+          <p>Our data shows tooth 11 (father pattern) scores high in 58.3% of cases — vs 41.7% for tooth 21. Freezing runs deeper than people-pleasing. Helplessness is harder to reach than shame.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MECHANISM -->
+<section class="mechanism">
+  <div class="container">
+    <div class="section-label" style="color: var(--rust-light);">How It Works</div>
+    <h2>The splitting mechanism that <em>destroys the incisor</em></h2>
+    <p>
+      Gardner's parental alienation research described the psychological mechanism. Psychostomatology reveals where it lands in the body.
+    </p>
+    <div class="mechanism-steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3>Idealization & Splitting</h3>
+        <p>
+          The alienating parent installs a binary: <strong>"This parent is good. That parent is dangerous."</strong> The child's nervous system maps this split onto their identity — and their body.
+        </p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3>Identification Blocked</h3>
+        <p>
+          Natural identification with the alienated parent becomes neurologically threatening. <strong>"If I'm like him/her, I'm bad."</strong> Shame about visibility. Helplessness when confronted. The limbo system locks down.
+        </p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3>Somatic Trace</h3>
+        <p>
+          Chronic stress from this suppression elevates cortisol. The corresponding incisor — 11 for father-pattern, 21 for mother-pattern — <strong>begins to deteriorate</strong>. The tooth reflects the wound the child cannot speak.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUESTIONNAIRES -->
+<section class="questionnaires" id="questionnaires">
+  <div class="container">
+    <div class="section-label">Self-Assessment Tools</div>
+    <h2>Diagnostic Questionnaires</h2>
+    <p>
+      These tools map psychological patterns to the two central incisors. Rate each statement honestly — not as you wish things were, but as they actually feel.
+    </p>
+
+    <div class="quiz-tabs">
+      <button class="quiz-tab active" onclick="switchTab('t21')">Tooth 21 — Mother Pattern</button>
+      <button class="quiz-tab" onclick="switchTab('t11')">Tooth 11 — Father Pattern</button>
+    </div>
+
+    <!-- TOOTH 21 PANEL -->
+    <div class="quiz-panel active" id="panel-t21">
+      <div class="quiz-header">
+        <div class="quiz-info">
+          <h3>Tooth 21 · Upper Left Central Incisor</h3>
+          <div class="meta-row">
+            <div class="meta-item"><span>Related to</span><span>Mother / Women / Social Belonging</span></div>
+            <div class="meta-item"><span>Core wound</span><span>Shame about visibility</span></div>
+            <div class="meta-item"><span>Primary mask</span><span>Acceptance (people-pleasing)</span></div>
+          </div>
+        </div>
+        <div class="quiz-instructions">
+          <p>
+            Rate each statement from <strong>0 to 10</strong>, where 0 = Not true at all and 10 = Completely true.<br><br>
+            Answer honestly — without the filter of "I'm good" or "I'm strong." The pattern hides behind the mask.
+          </p>
+        </div>
+      </div>
+
+      <div class="questions-list" id="questions-t21">
+        <div class="question-item">
+          <div><span class="question-num">1.</span><span class="question-text">"I feel not good enough, inferior to others."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="1" oninput="updateScore('t21')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">2.</span><span class="question-text">"I feel ashamed or embarrassed when people look at me."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="2" oninput="updateScore('t21')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">3.</span><span class="question-text">"I feel ugly or frightening — I don't like how I appear."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="3" oninput="updateScore('t21')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">4.</span><span class="question-text">"I feel insignificant, worthless, like a nobody."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="4" oninput="updateScore('t21')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">5.</span><span class="question-text">"I feel there is something fundamentally wrong with me."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="5" oninput="updateScore('t21')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">6.</span><span class="question-text">"I fear being rejected or pushed away by others."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="6" oninput="updateScore('t21')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">7.</span><span class="question-text">"I fear that people see me as wrong, broken, or not good enough."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="7" oninput="updateScore('t21')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">8.</span><span class="question-text">"I please others and accommodate to be accepted — even when I don't want to."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="8" oninput="updateScore('t21')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">9.</span><span class="question-text">"I hide who I really am — I don't show my true self to others."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="9" oninput="updateScore('t21')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">10.</span><span class="question-text">"I work hard to be accepted because I'm afraid of being rejected."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="10" oninput="updateScore('t21')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BONUS SECTION -->
+      <div class="section-divider">
+        <h4>Additional Questions — Parental Alienation Markers</h4>
+        <div class="bonus-questions">
+          <div class="bonus-item">
+            <label>A. "My father was a handsome or charismatic man."</label>
+            <div class="checkbox-group"><label><input type="checkbox" name="21a"> Yes</label><label><input type="checkbox" name="21a2"> No</label></div>
+          </div>
+          <div class="bonus-item">
+            <label>B. "I was not allowed to openly admire my father — my mother discouraged it."</label>
+            <div class="checkbox-group"><label><input type="checkbox" name="21b"> Yes</label><label><input type="checkbox" name="21b2"> No</label></div>
+          </div>
+          <div class="bonus-item">
+            <label>C. "I feel the urge to 'fix' men — including sons or male partners."</label>
+            <div class="checkbox-group"><label><input type="checkbox" name="21c"> Yes</label><label><input type="checkbox" name="21c2"> No</label></div>
+          </div>
+          <div class="bonus-item">
+            <label>D. "My mother said my father was bad, dangerous, or pathetic."</label>
+            <div class="checkbox-group"><label><input type="checkbox" name="21d"> Yes</label><label><input type="checkbox" name="21d2"> No</label></div>
+          </div>
+          <div class="bonus-item">
+            <label>E. "I received the message that being like my father would make me bad or wrong."</label>
+            <div class="checkbox-group"><label><input type="checkbox" name="21e"> Yes</label><label><input type="checkbox" name="21e2"> No</label></div>
+          </div>
+        </div>
+        <p style="margin-top: 20px; font-size: 14px; color: var(--muted); font-style: italic;">
+          If you answered YES to B, D, or E — this indicates the "splitting" mechanism at the core of tooth 21 destruction: "Father was valuable → Mother said father is bad → Being visible (like father) = I am bad → Shame about visibility → Tooth 21 under attack."
+        </p>
+      </div>
+
+      <div class="score-panel" id="score-panel-t21">
+        <div class="score-display">
+          <div class="score-number" id="score-t21">0</div>
+          <div class="score-max">/ 100 points</div>
+          <div class="score-bar"><div class="score-bar-fill" id="bar-t21"></div></div>
+          <button class="calc-btn" onclick="calculateScore('t21')">Calculate Score</button>
+        </div>
+        <div class="score-interpretation" id="interp-t21">
+          <h4>Your Pattern Intensity</h4>
+          <p>Complete the questionnaire and press Calculate Score to see your result and what it means for tooth 21.</p>
+          <p style="font-size: 13px;">
+            <strong>0–30:</strong> Weak or no pattern<br>
+            <strong>31–60:</strong> Moderate pattern — worth monitoring<br>
+            <strong>61–100:</strong> Strong pattern — tooth likely severely affected
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOOTH 11 PANEL -->
+    <div class="quiz-panel" id="panel-t11">
+      <div class="quiz-header">
+        <div class="quiz-info">
+          <h3>Tooth 11 · Upper Right Central Incisor</h3>
+          <div class="meta-row">
+            <div class="meta-item"><span>Related to</span><span>Father / Men / Authority</span></div>
+            <div class="meta-item"><span>Core wound</span><span>Helplessness</span></div>
+            <div class="meta-item"><span>Primary mask</span><span>Power (false strength)</span></div>
+          </div>
+        </div>
+        <div class="quiz-instructions">
+          <p>
+            Rate each statement from <strong>0 to 10</strong>.<br><br>
+            The tooth 11 pattern is particularly deceptive — the <strong>Power mask</strong> (presenting as strong) actively hides the helplessness underneath. Answer for the inner state, not the outer presentation.
+          </p>
+        </div>
+      </div>
+
+      <div class="questions-list" id="questions-t11">
+        <div class="question-item">
+          <div><span class="question-num">1.</span><span class="question-text">"I feel inadequate or different from others in a way that's hard to explain."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="1" oninput="updateScore('t11')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">2.</span><span class="question-text">"My father criticized me, ridiculed me, or belittled my efforts."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="2" oninput="updateScore('t11')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">3.</span><span class="question-text">"I feel ridiculous or 'toothless' when I try to show up or assert myself."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="3" oninput="updateScore('t11')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">4.</span><span class="question-text">"I freeze when I need to defend myself or set a boundary — especially with men."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="4" oninput="updateScore('t11')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">5.</span><span class="question-text">"I feel helpless when a man violates my boundaries, even though I appear composed."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="5" oninput="updateScore('t11')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">6.</span><span class="question-text">"I present myself as strong and capable to hide inner helplessness."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="6" oninput="updateScore('t11')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">7.</span><span class="question-text">"I do everything to be accepted — I accommodate, people-please, fit in."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="7" oninput="updateScore('t11')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">8.</span><span class="question-text">"I received messages — from father or male figures — that I was ridiculous, inadequate, or helpless."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="8" oninput="updateScore('t11')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">9.</span><span class="question-text">"I hide my vulnerability — I only allow others to see my 'strong' version."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="9" oninput="updateScore('t11')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+        <div class="question-item">
+          <div><span class="question-num">10.</span><span class="question-text">"I feel ashamed to show myself fully — at work, in groups, in relationships."</span></div>
+          <div class="rating-input">
+            <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="10" oninput="updateScore('t11')">
+            <span class="rating-label">/ 10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider">
+        <h4>The Freeze Pattern — Key Marker for Tooth 11</h4>
+        <p style="font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.75;">
+          Question 4 ("I freeze when I need to defend myself") is the single most diagnostic question for tooth 11. A high score (7–10) confirms the core mechanism: the Alpha-Victim father programmed "I cannot fight back against father" → freezing became the default → the incisor lost its function → tooth deterioration.
+        </p>
+        <p style="font-size: 14px; color: var(--rust); font-family: 'DM Mono', monospace; letter-spacing: 0.1em;">
+          NOTE: Tooth 11 scores are statistically more suppressed than tooth 21. If your tooth is severely damaged but your score is low — the Power mask is likely hiding the pattern from you.
+        </p>
+      </div>
+
+      <div class="score-panel" id="score-panel-t11">
+        <div class="score-display">
+          <div class="score-number" id="score-t11">0</div>
+          <div class="score-max">/ 100 points</div>
+          <div class="score-bar"><div class="score-bar-fill" id="bar-t11"></div></div>
+          <button class="calc-btn" onclick="calculateScore('t11')">Calculate Score</button>
+        </div>
+        <div class="score-interpretation" id="interp-t11">
+          <h4>Your Pattern Intensity</h4>
+          <p>Complete the questionnaire and press Calculate Score to see your result and what it means for tooth 11.</p>
+          <p style="font-size: 13px;">
+            <strong>0–30:</strong> Weak or no pattern<br>
+            <strong>31–60:</strong> Moderate pattern — worth monitoring<br>
+            <strong>61–100:</strong> Strong pattern — tooth likely severely affected
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="section-label">Research Data</div>
+    <h2 style="font-size: clamp(28px, 3.5vw, 44px); font-weight: 300; letter-spacing: -0.02em; max-width: 600px; line-height: 1.2;">
+      Five years of clinical observation. The numbers don't shift.
+    </h2>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">130<em>+</em></div>
+        <div class="stat-label">Documented cases linking teeth to relational patterns</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">58<em>%</em></div>
+        <div class="stat-label">High scores on Tooth 11 (father pattern) across all cases</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">7<em>/10</em></div>
+        <div class="stat-label">Cases where the idealized parent was the mother</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Years of active psychostomatological research since 2020</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left">
+        <div class="section-label">Who is behind this</div>
+        <div class="about-name">Anton Kazakov</div>
+        <div class="about-title">Psychostomatologist · Researcher</div>
+        <p>Founder of Psychostomatology №1 and the Healing Relationships communication school. Researcher of psychological mechanisms behind dental deterioration since 2020.</p>
+        <p style="margin-top: 16px;">Author of patented psychostomatological diagnostic methods. EEG-based research protocol measuring stress index, cognitive control, and limbic system activation during therapeutic interventions.</p>
+      </div>
+      <div class="about-right">
+        <h2>The research began with <em>my own tooth</em> — and a proposed surgery I refused.</h2>
+        <p>
+          In 2018, a dentist recommended resection of the root apex of my tooth 21. Instead of agreeing, I went looking for the psychological root of the problem. What I found changed the direction of my work entirely.
+        </p>
+        <p>
+          Over the following years, I discovered that behind every chronically damaged tooth, there was a predictable relational pattern — and behind that pattern, almost always, some form of parental alienation. A parent demonized. An identification blocked. A self divided against itself.
+        </p>
+        <p>
+          <strong>The tooth doesn't cause the problem. It reports it.</strong> And when the psychological pattern shifts — when genuine separation from the alienating parent begins — we observe changes in the dental tissue as well.
+        </p>
+        <p>
+          This is the frontier of psychostomatology: not replacing dentistry, but giving it a psychological partner. And giving PAS researchers, therapists, and families a new way to see what's already written in the mouth.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNOSIS CTA -->
+<section class="diagnosis-cta">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="section-label" style="color: var(--rust-light);">Free Public Diagnosis</div>
+      <h2>See what your teeth <em>say about your family.</em></h2>
+      <p>
+        A live, public psychostomatological diagnosis is available for free. Bring your dental CT scan, your tooth history, and your questions.
+      </p>
+      <p>
+        What you'll receive: a reading of the relational patterns behind your dental problems, and a clear picture of where psychological separation work needs to happen.
+      </p>
+      <p class="fine-print">Live broadcast format · No obligation · Conducted in English</p>
+      <div class="cta-group">
+        <a href="https://psyteeth.com/diagnosis" class="cta-primary" target="_blank">
+          Book Free Diagnosis →
+        </a>
+        <a href="#questionnaires" class="cta-secondary">Start with the questionnaire first</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">Psy<span>Teeth</span>.com</div>
+      <div class="footer-meta">Psychostomatology Research · Since 2020</div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Psychostomatology №1 · Anton Kazakov · psyteeth.com</p>
+      <p>Research findings are observational. This site does not provide medical or dental diagnosis.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function switchTab(tooth) {
+    document.querySelectorAll('.quiz-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.quiz-panel').forEach(p => p.classList.remove('active'));
+    
+    const idx = tooth === 't21' ? 0 : 1;
+    document.querySelectorAll('.quiz-tab')[idx].classList.add('active');
+    document.getElementById('panel-' + tooth).classList.add('active');
+  }
+
+  function updateScore(tooth) {
+    const cls = tooth === 't21' ? '.q21' : '.q11';
+    const inputs = document.querySelectorAll('#panel-' + (tooth === 't21' ? 't21' : 't11') + ' ' + cls);
+    let total = 0;
+    inputs.forEach(inp => {
+      let v = parseInt(inp.value) || 0;
+      if (v < 0) v = 0;
+      if (v > 10) v = 10;
+      total += v;
+    });
+    document.getElementById('score-' + tooth).textContent = total;
+    document.getElementById('bar-' + tooth).style.width = total + '%';
+    
+    const scoreEl = document.getElementById('score-' + tooth);
+    if (total >= 61) scoreEl.style.color = 'var(--rust)';
+    else if (total >= 31) scoreEl.style.color = 'var(--graphite)';
+    else scoreEl.style.color = 'var(--charcoal)';
+  }
+
+  function calculateScore(tooth) {
+    const cls = tooth === 't21' ? '.q21' : '.q11';
+    const panelId = 'panel-' + tooth;
+    const inputs = document.querySelectorAll('#' + panelId + ' ' + cls);
+    let total = 0;
+    inputs.forEach(inp => {
+      let v = parseInt(inp.value) || 0;
+      if (v < 0) v = 0;
+      if (v > 10) v = 10;
+      total += v;
+    });
+
+    document.getElementById('score-' + tooth).textContent = total;
+    document.getElementById('bar-' + tooth).style.width = total + '%';
+
+    const scoreEl = document.getElementById('score-' + tooth);
+    const interpEl = document.getElementById('interp-' + tooth);
+
+    let heading, text, color;
+
+    if (total <= 30) {
+      heading = 'Weak Pattern (0–30)';
+      text = 'The pattern associated with this tooth is either absent or well-managed. This may reflect healthy psychological separation — or a very effective mask. If your tooth shows physical damage despite a low score, consider that the Power mask (tooth 11) or learned suppression may be obscuring your responses.';
+      color = 'var(--sage)';
+    } else if (total <= 60) {
+      heading = 'Moderate Pattern (31–60)';
+      text = 'This range suggests an active but partially managed pattern. The wound is present — you likely recognize moments where it drives behavior — but you have developed some capacity to navigate it. Dental tissue in this range is typically showing early-to-moderate signs of deterioration. This is the most productive zone to begin working.';
+      color = 'var(--graphite)';
+    } else {
+      heading = 'Strong Pattern (61–100)';
+      text = 'The pattern is highly active and is very likely driving both relational difficulties and dental deterioration. People in this range often describe deep-seated shame (tooth 21) or persistent freeze responses in conflict (tooth 11). This is not irreversible — but it is calling for genuine psychological separation work, not cosmetic dental repair.';
+      color = 'var(--rust)';
+    }
+
+    scoreEl.style.color = color;
+    interpEl.innerHTML = `
+      <h4 style="color: ${color}">${heading}</h4>
+      <p>${text}</p>
+      <p style="font-size: 13px; margin-top: 16px; color: var(--muted);">
+        Save your score. You'll want to retest after 4–8 weeks of pattern work to track movement.
+      </p>
+      <a href="#diagnosis-cta" class="calc-btn" style="text-decoration: none; display: inline-flex; margin-top: 20px;" onclick="document.querySelector('.diagnosis-cta').scrollIntoView({behavior:'smooth'}); return false;">Book Free Diagnosis →</a>
+    `;
+  }
+</script>
+</body>
+</html>
