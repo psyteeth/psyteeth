@@ -1459,7 +1459,7 @@
       </p>
       <p class="fine-print">No obligation · No sales · Just the conversation</p>
       <div class="cta-group">
-        <a href="/cdn-cgi/l/email-protection#1d6d6e6469787869755d7a707c7471337e7270" class="cta-primary">
+        <a href="mailto:psyteeth@gmail.com" class="cta-primary">
           Questions or results to share? Write us →
         </a>
         <a href="#questionnaires" class="cta-secondary">Start with the questionnaire first</a>
@@ -1477,79 +1477,81 @@
     </div>
     <div class="footer-bottom">
       <p>© 2026 Anton Kazakov · psyteeth.com</p>
-      <p>Research findings are observational. This site does not provide medical or dental diagnosis. Questions? Write us at <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>const u='psyteeth';const d='gmail.com';document.write('<a href="mailto:'+u+'@'+d+'" style="color:#444">'+u+'@'+d+'</a>');</script></p>
+      <p>Research findings are observational. This site does not provide medical or dental diagnosis. Questions? Write us at <a href="mailto:psyteeth@gmail.com" style="color:#444">psyteeth@gmail.com</a></p>
     </div>
   </div>
 </footer>
 
 <script>
-  function switchTab(tooth) {
-    document.querySelectorAll('.quiz-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.quiz-panel').forEach(p => p.classList.remove('active'));
-    
-    const idx = tooth === 't21' ? 0 : 1;
-    document.querySelectorAll('.quiz-tab')[idx].classList.add('active');
-    document.getElementById('panel-' + tooth).classList.add('active');
+function switchTab(tab) {
+  document.querySelectorAll('.quiz-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.quiz-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-' + tab).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function updateScore(tab) {
+  const inputs = document.querySelectorAll('.' + (tab === 't21' ? 'q21' : 'q11'));
+  let total = 0;
+  inputs.forEach(input => {
+    const val = Math.min(10, Math.max(0, parseInt(input.value) || 0));
+    total += val;
+  });
+  document.getElementById('score-' + tab).textContent = total;
+  document.getElementById('bar-' + tab).style.width = total + '%';
+}
+
+function calculateScore(tab) {
+  const inputs = document.querySelectorAll('.' + (tab === 't21' ? 'q21' : 'q11'));
+  let total = 0;
+  inputs.forEach(input => {
+    const val = Math.min(10, Math.max(0, parseInt(input.value) || 0));
+    total += val;
+  });
+
+  document.getElementById('score-' + tab).textContent = total;
+  document.getElementById('bar-' + tab).style.width = total + '%';
+
+  const interp = document.getElementById('interp-' + tab);
+  let heading = '';
+  let text = '';
+  let color = '';
+
+  if (total <= 30) {
+    heading = 'Mild pattern (0–30)';
+    text = tab === 't21'
+      ? 'Low scores on tooth 21 suggest the denigrated father pattern is not strongly active. This may indicate healthy identification with the father — or that the pattern has not yet surfaced consciously.'
+      : 'Low scores on tooth 11 often hide behind a mask of strength. If the tooth is significantly damaged but the score is low, the pattern may be active but concealed by compensatory behavior.';
+    color = 'var(--sage)';
+  } else if (total <= 60) {
+    heading = 'Moderate pattern (31–60)';
+    text = tab === 't21'
+      ? 'A moderate score indicates an active pleasing pattern. You may experience recurring difficulty with visibility, self-assertion, and the feeling of having the right to take up space.'
+      : 'A moderate score indicates an active suppression pattern. You may notice that you appear strong while experiencing helplessness in situations that require self-defense.';
+    color = 'var(--graphite)';
+  } else {
+    heading = 'Strong pattern (61–100)';
+    text = tab === 't21'
+      ? 'A high score points to a deeply rooted denigrated father pattern. Shame around visibility, people-pleasing, and the felt absence of the right to exist fully are likely central themes. Tooth 21 damage is probably significant.'
+      : 'A high score points to a deeply rooted denigrated mother pattern. The strength mask, freezing under confrontation, and hidden helplessness are likely defining features. Tooth 11 damage is probably significant.';
+    color = 'var(--rust)';
   }
 
-  function updateScore(tooth) {
-    const cls = tooth === 't21' ? '.q21' : '.q11';
-    const inputs = document.querySelectorAll('#panel-' + (tooth === 't21' ? 't21' : 't11') + ' ' + cls);
-    let total = 0;
-    inputs.forEach(inp => {
-      let v = parseInt(inp.value) || 0;
-      if (v < 0) v = 0;
-      if (v > 10) v = 10;
-      total += v;
-    });
-    document.getElementById('score-' + tooth).textContent = total;
-    document.getElementById('bar-' + tooth).style.width = total + '%';
-    
-    const scoreEl = document.getElementById('score-' + tooth);
-    if (total >= 61) scoreEl.style.color = 'var(--rust)';
-    else if (total >= 31) scoreEl.style.color = 'var(--graphite)';
-    else scoreEl.style.color = 'var(--charcoal)';
-  }
-
-  function calculateScore(tooth) {
-    const cls = tooth === 't21' ? '.q21' : '.q11';
-    const panelId = 'panel-' + tooth;
-    const inputs = document.querySelectorAll('#' + panelId + ' ' + cls);
-    let total = 0;
-    inputs.forEach(inp => {
-      let v = parseInt(inp.value) || 0;
-      if (v < 0) v = 0;
-      if (v > 10) v = 10;
-      total += v;
-    });
-
-    document.getElementById('score-' + tooth).textContent = total;
-    document.getElementById('bar-' + tooth).style.width = total + '%';
-
-    const scoreEl = document.getElementById('score-' + tooth);
-    const interpEl = document.getElementById('interp-' + tooth);
-
-    let heading, text, color;
-
-    if (total <= 30) {
-      heading = 'Weak Pattern (0–30)';
-      text = 'The pattern associated with this tooth is either absent or well-managed. This may reflect healthy psychological separation — or a very effective mask. If your tooth shows physical damage despite a low score, consider that the Power mask (tooth 11) or learned suppression may be obscuring your responses.';
-      color = 'var(--sage)';
-    } else if (total <= 60) {
-      heading = 'Moderate Pattern (31–60)';
-      text = 'This range suggests an active but partially managed pattern. The wound is present — you likely recognize moments where it drives behavior — but you have developed some capacity to navigate it. Dental tissue in this range is typically showing early-to-moderate signs of deterioration. This is the most productive zone to begin working.';
-      color = 'var(--graphite)';
-    } else {
-      heading = 'Strong Pattern (61–100)';
-      text = 'The pattern is highly active and is very likely driving both relational difficulties and dental deterioration. People in this range often describe deep-seated shame (tooth 21) or persistent freeze responses in conflict (tooth 11). This is not irreversible — but it is calling for genuine psychological separation work, not cosmetic dental repair.';
-      color = 'var(--rust)';
-    }
-
-    scoreEl.style.color = color;
-    interpEl.innerHTML = `
-      <h4 style="color: ${color}">${heading}</h4>
-      <p>${text}</p>
-      <p style="font-size: 13px; margin-top: 16px; color: var(--muted);">
-        Save your score. You'll want to retest after 4–8 weeks of pattern work to track movement.
-      </p>
-      <a href="mailto:psyteeth@gmail.com" class="calc-btn" style="
+  interp.innerHTML = `
+    <h4 style="color: ${color}">${heading}</h4>
+    <p>${text}</p>
+    <p style="font-size: 13px; margin-top: 16px; color: var(--muted);">
+      Save your score. Retest after 4–8 weeks of pattern work to track movement.
+    </p>
+    <a href="mailto:psyteeth@gmail.com" class="calc-btn" style="
+      display: inline-block; margin-top: 16px; padding: 12px 24px;
+      background: var(--rust); color: white; text-decoration: none;
+      font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em;
+      text-transform: uppercase;">
+      Discuss your result →
+    </a>
+  `;
+}
+</script>
+</body>
+</html>
