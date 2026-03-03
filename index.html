@@ -1136,6 +1136,9 @@
             <div class="meta-item"><span>Related to</span><span>Mother (idealized) / Father (denigrated)</span></div>
             <div class="meta-item"><span>Core wound</span><span>Suppressed identification with the father</span></div>
             <div class="meta-item"><span>Primary mask</span><span>Acceptance (people-pleasing)</span></div>
+            <div class="meta-item"><span>In life</span><span>Cannot bring themselves to hurt narcissistic women</span></div>
+            <div class="meta-item"><span>Takes it out on</span><span>The innocent ones â sons included</span></div>
+            <div class="meta-item"><span>Their lie</span><span>Blaming men</span></div>
           </div>
         </div>
         <div class="quiz-instructions">
@@ -1277,6 +1280,9 @@
             <div class="meta-item"><span>Related to</span><span>Father (idealized) / Mother (denigrated)</span></div>
             <div class="meta-item"><span>Core wound</span><span>Suppressed identification with the mother</span></div>
             <div class="meta-item"><span>Primary mask</span><span>Power (false strength)</span></div>
+            <div class="meta-item"><span>In life</span><span>Cannot bring themselves to hurt narcissistic men</span></div>
+            <div class="meta-item"><span>Takes it out on</span><span>The innocent ones â daughters included</span></div>
+            <div class="meta-item"><span>Their lie</span><span>Blaming women</span></div>
           </div>
         </div>
         <div class="quiz-instructions">
@@ -1498,68 +1504,35 @@ function switchTab(tab) {
   document.getElementById('panel-' + tab).classList.add('active');
   event.target.classList.add('active');
 }
-
 function updateScore(tab) {
   const inputs = document.querySelectorAll('.' + (tab === 't21' ? 'q21' : 'q11'));
   let total = 0;
-  inputs.forEach(input => {
-    const val = Math.min(10, Math.max(0, parseInt(input.value) || 0));
-    total += val;
-  });
+  inputs.forEach(function(input) { total += Math.min(10, Math.max(0, parseInt(input.value) || 0)); });
   document.getElementById('score-' + tab).textContent = total;
   document.getElementById('bar-' + tab).style.width = total + '%';
 }
-
 function calculateScore(tab) {
   const inputs = document.querySelectorAll('.' + (tab === 't21' ? 'q21' : 'q11'));
   let total = 0;
-  inputs.forEach(input => {
-    const val = Math.min(10, Math.max(0, parseInt(input.value) || 0));
-    total += val;
-  });
-
+  inputs.forEach(function(input) { total += Math.min(10, Math.max(0, parseInt(input.value) || 0)); });
   document.getElementById('score-' + tab).textContent = total;
   document.getElementById('bar-' + tab).style.width = total + '%';
-
   const interp = document.getElementById('interp-' + tab);
-  let heading = '';
-  let text = '';
-  let color = '';
-
+  let heading, text, color;
   if (total <= 30) {
-    heading = 'Mild pattern (0–30)';
-    text = tab === 't21'
-      ? 'Low scores on tooth 21 suggest the denigrated father pattern is not strongly active. This may indicate healthy identification with the father — or that the pattern has not yet surfaced consciously.'
-      : 'Low scores on tooth 11 often hide behind a mask of strength. If the tooth is significantly damaged but the score is low, the pattern may be active but concealed by compensatory behavior.';
+    heading = 'Mild pattern (0-30)';
+    text = tab === 't21' ? 'Low scores on tooth 21 suggest the denigrated father pattern is not strongly active. This may indicate healthy identification with the father, or that the pattern has not yet surfaced consciously.' : 'Low scores on tooth 11 often hide behind a mask of strength. If the tooth is significantly damaged but the score is low, the pattern may be active but concealed by compensatory behavior.';
     color = 'var(--sage)';
   } else if (total <= 60) {
-    heading = 'Moderate pattern (31–60)';
-    text = tab === 't21'
-      ? 'A moderate score indicates an active pleasing pattern. You may experience recurring difficulty with visibility, self-assertion, and the feeling of having the right to take up space.'
-      : 'A moderate score indicates an active suppression pattern. You may notice that you appear strong while experiencing helplessness in situations that require self-defense.';
+    heading = 'Moderate pattern (31-60)';
+    text = tab === 't21' ? 'A moderate score indicates an active pleasing pattern. You may experience recurring difficulty with visibility, self-assertion, and the feeling of having the right to take up space.' : 'A moderate score indicates an active suppression pattern. You may notice that you appear strong while experiencing helplessness in situations that require self-defense.';
     color = 'var(--graphite)';
   } else {
-    heading = 'Strong pattern (61–100)';
-    text = tab === 't21'
-      ? 'A high score points to a deeply rooted denigrated father pattern. Shame around visibility, people-pleasing, and the felt absence of the right to exist fully are likely central themes. Tooth 21 damage is probably significant.'
-      : 'A high score points to a deeply rooted denigrated mother pattern. The strength mask, freezing under confrontation, and hidden helplessness are likely defining features. Tooth 11 damage is probably significant.';
+    heading = 'Strong pattern (61-100)';
+    text = tab === 't21' ? 'A high score points to a deeply rooted denigrated father pattern. Shame around visibility, people-pleasing, and the felt absence of the right to exist fully are likely central themes. Tooth 21 damage is probably significant.' : 'A high score points to a deeply rooted denigrated mother pattern. The strength mask, freezing under confrontation, and hidden helplessness are likely defining features. Tooth 11 damage is probably significant.';
     color = 'var(--rust)';
   }
-
-  interp.innerHTML = `
-    <h4 style="color: ${color}">${heading}</h4>
-    <p>${text}</p>
-    <p style="font-size: 13px; margin-top: 16px; color: var(--muted);">
-      Save your score. Retest after 4–8 weeks of pattern work to track movement.
-    </p>
-    <a href="mailto:psyteeth@gmail.com" class="calc-btn" style="
-      display: inline-block; margin-top: 16px; padding: 12px 24px;
-      background: var(--rust); color: white; text-decoration: none;
-      font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em;
-      text-transform: uppercase;">
-      Discuss your result →
-    </a>
-  `;
+  interp.innerHTML = '<h4 style="color:' + color + '">' + heading + '</h4><p>' + text + '</p><p style="font-size:13px;margin-top:16px;color:var(--muted);">Save your score. Retest after 4-8 weeks of pattern work to track movement.</p><a href="mailto:psyteeth@gmail.com" class="calc-btn" style="display:inline-block;margin-top:16px;padding:12px 24px;background:var(--rust);color:white;text-decoration:none;font-family:DM Mono,monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;">Discuss your result</a>';
 }
 </script>
 </body>
