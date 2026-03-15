@@ -1,43 +1,10 @@
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Психостоматология№1</title>
-
-<!-- SEO -->
-<meta name="description" content="Провал сепарации оставляет физические следы — в зубах. Кариес, коронки, виниры на передних зубах отражают незавершённую сепарацию с родителями. Психологи называют это эмоциональным инцестом. Пять лет исследований, 130+ случаев. Пройдите бесплатную диагностику.">
-<meta name="keywords" content="родительское отчуждение зубы, синдром родительского отчуждения, психосоматика зубов, зубы и отношения, психостоматология, зубы психология, резцы родительское отчуждение, провал сепарации, эмоциональный инцест, незавершённая сепарация, кариес психосоматика, коронки на зубах причины, виниры психология, боль в зубах стресс, передние зубы пломба причина, антон казаков, психостоматология №1, психология отношений, психология семьи, психология малых групп">
-<meta name="author" content="Антон Казаков">
-<meta name="yandex-verification" content="cc63ae260fc8c3ef" />
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://xn--e1afmapc2ahdp2b.xn--p1ai/">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://xn--e1afmapc2ahdp2b.xn--p1ai/">
-<meta property="og:title" content="Родительское отчуждение всегда оставляет след. В зубах.">
-<meta property="og:description" content="Зубы громче слов. Они — самое наглядное доказательство эмоционального насилия и родительского отчуждения. Пять лет исследований, 130+ случаев.">
-<meta property="og:image" content="https://xn--e1afmapc2ahdp2b.xn--p1ai/og-image.jpg">
-<meta property="og:locale" content="ru_RU">
-<meta property="og:site_name" content="Психостоматология №1">
-
-<!-- Schema.org -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ResearchProject",
-  "name": "Психостоматология №1 — исследование зубов и родительского отчуждения",
-  "description": "Исследование связи между синдромом родительского отчуждения и разрушением зубных тканей. Пять лет клинических наблюдений, 130+ задокументированных случаев.",
-  "url": "https://психостоматология.рф",
-  "author": {
-    "@type": "Person",
-    "name": "Антон Казаков",
-    "jobTitle": "Психолог, исследователь психостоматологии"
-  },
-  "keywords": "родительское отчуждение, психостоматология, зубы, психосоматика, эмоциональное насилие"
-}
-</script>
+<title>PsyTeeth — Your Teeth Know the Truth About Parental Alienation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -56,7 +23,9 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   html { scroll-behavior: smooth; }
+
   body {
     background: var(--warm-white);
     color: var(--charcoal);
@@ -64,9 +33,9 @@
     font-size: 18px;
     line-height: 1.7;
     overflow-x: hidden;
-    zoom: 1.05;
   }
 
+  /* HERO */
   .hero {
     min-height: 100vh;
     display: grid;
@@ -92,8 +61,8 @@
     top: 0;
     bottom: 0;
     width: 60px;
-    background: linear-gradient(to right, var(--charcoal), transparent);
-    z-index: 3;
+    background: var(--charcoal);
+    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
   }
 
   .hero-right {
@@ -105,122 +74,164 @@
     position: relative;
   }
 
+  .tooth-graphic {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.06;
+    font-size: 320px;
+    line-height: 1;
+    user-select: none;
+    color: var(--charcoal);
+  }
+
   .domain-tag {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--rust-light);
+    color: var(--rust);
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .domain-tag::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--rust);
   }
 
   h1 {
-    font-size: clamp(28px, 3.5vw, 46px);
+    font-size: clamp(42px, 5vw, 68px);
     font-weight: 300;
+    line-height: 1.1;
     color: var(--ivory);
-    line-height: 1.15;
+    margin-bottom: 24px;
     letter-spacing: -0.02em;
-    margin-bottom: 32px;
+  }
+
+  em {
+    color: var(--rust-light);
+    font-style: italic;
   }
 
   h1 em {
     font-style: italic;
     color: var(--rust-light);
-    display: block;
-    margin-top: 8px;
   }
 
   .hero-sub {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 48px;
+    font-size: 17px;
+    color: var(--bone);
+    max-width: 400px;
     line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 48px;
   }
 
   .scroll-hint {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--rust-light);
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: pulse 2.5s ease-in-out infinite;
   }
 
-  .tooth-graphic {
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-30%);
-    opacity: 0.9;
-    font-size: 320px;
-    line-height: 1;
-    user-select: none;
-    pointer-events: none;
-    z-index: 0;
-  } }
-
-  .hero-right > *:not(.tooth-graphic) {
-    position: relative;
-    z-index: 1;
+  .scroll-hint::after {
+    content: '↓';
+    font-size: 16px;
   }
 
-  .section-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--rust);
-    margin-bottom: 20px;
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
   }
 
   .hero-right h2 {
-    font-size: clamp(20px, 2.2vw, 28px);
+    font-size: clamp(22px, 3vw, 32px);
     font-weight: 300;
-    line-height: 1.4;
-    letter-spacing: -0.01em;
-    margin-bottom: 20px;
     color: var(--graphite);
+    line-height: 1.4;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-right h2 strong {
+    font-weight: 600;
+    color: var(--charcoal);
   }
 
   .hero-right p {
-    font-size: 16px;
     color: var(--muted);
-    line-height: 1.85;
-    margin-bottom: 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 420px;
+    margin-bottom: 48px;
   }
 
   .cta-primary {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    background: var(--rust);
-    color: white;
+    gap: 16px;
+    background: var(--charcoal);
+    color: var(--ivory);
     text-decoration: none;
-    padding: 16px 32px;
+    padding: 18px 36px;
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    transition: background 0.25s ease;
-    align-self: flex-start;
+    transition: all 0.3s ease;
+    border: 1px solid var(--charcoal);
+    cursor: pointer;
   }
 
-  .cta-primary:hover { background: var(--charcoal); }
+  .cta-primary:hover {
+    background: var(--rust);
+    border-color: var(--rust);
+  }
 
-  section { padding: 100px 0; }
+  /* SECTION STYLES */
+  section {
+    padding: 100px 0;
+  }
 
   .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 40px;
   }
 
-  .concept { background: var(--warm-white); }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--rust);
+  }
+
+  /* CONCEPT SECTION */
+  .concept {
+    background: var(--cream);
+  }
 
   .concept-grid {
     display: grid;
@@ -229,156 +240,181 @@
     align-items: start;
   }
 
-  .concept-grid h2 {
-    font-size: clamp(28px, 3vw, 42px);
+  .concept h2 {
+    font-size: clamp(32px, 4vw, 52px);
     font-weight: 300;
-    letter-spacing: -0.02em;
-    margin-bottom: 24px;
     line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    color: var(--charcoal);
   }
 
-  .concept-grid h2 em {
+  .concept h2 em {
     font-style: italic;
     color: var(--rust);
   }
 
-  .concept-grid p {
+  .concept p {
     color: var(--graphite);
+    margin-bottom: 20px;
     font-size: 17px;
     line-height: 1.85;
-    margin-bottom: 20px;
   }
 
-  .concept-cards { display: flex; flex-direction: column; gap: 2px; }
+  .concept-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 
   .concept-card {
-    background: var(--cream);
-    padding: 32px 36px;
+    background: var(--warm-white);
     border-left: 3px solid var(--rust);
+    padding: 28px 32px;
+    transition: transform 0.3s ease;
   }
 
-  .tooth-num {
+  .concept-card:hover {
+    transform: translateX(6px);
+  }
+
+  .concept-card .tooth-num {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.15em;
-    text-transform: uppercase;
     color: var(--rust);
-    margin-bottom: 12px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
   }
 
   .concept-card h3 {
     font-size: 22px;
     font-weight: 400;
     margin-bottom: 12px;
-    letter-spacing: -0.01em;
+    color: var(--charcoal);
   }
 
   .concept-card p {
     font-size: 15px;
     color: var(--muted);
-    line-height: 1.75;
+    margin: 0;
+    line-height: 1.7;
   }
 
-  .concept-card p em { font-style: italic; color: var(--rust); }
-
-  .mechanism { background: var(--charcoal); color: var(--ivory); }
-
-  .mechanism .section-label { color: var(--rust-light); }
+  /* MECHANISM */
+  .mechanism {
+    background: var(--charcoal);
+    color: var(--ivory);
+  }
 
   .mechanism h2 {
-    font-size: clamp(28px, 3.5vw, 48px);
+    font-size: clamp(28px, 3.5vw, 46px);
     font-weight: 300;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
     line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
     max-width: 700px;
   }
 
-  .mechanism h2 em { font-style: italic; color: var(--rust-light); }
+  .mechanism h2 em {
+    font-style: italic;
+    color: var(--rust-light);
+  }
 
   .mechanism > .container > p {
     color: var(--bone);
     font-size: 17px;
-    line-height: 1.85;
-    max-width: 640px;
+    max-width: 600px;
     margin-bottom: 64px;
+    line-height: 1.85;
   }
 
   .mechanism-steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2px;
+    background: var(--graphite);
   }
 
   .step {
-    background: rgba(255,255,255,0.04);
-    padding: 40px 32px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    background: var(--charcoal);
+    padding: 48px 36px;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+
+  .step:hover {
+    background: #242424;
   }
 
   .step-num {
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: var(--rust-light);
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--graphite);
+    line-height: 1;
+    margin-bottom: 24px;
     display: block;
-    margin-bottom: 20px;
   }
 
   .step h3 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--ivory);
     margin-bottom: 16px;
-    letter-spacing: -0.01em;
   }
 
   .step p {
     font-size: 15px;
     color: var(--bone);
-    line-height: 1.8;
+    line-height: 1.75;
   }
 
-  .step p strong { color: var(--ivory); font-weight: 400; }
+  .step p strong {
+    color: var(--rust-light);
+    font-weight: 400;
+  }
 
-  .questionnaires { background: var(--warm-white); }
+  /* QUESTIONNAIRE SECTION */
+  .questionnaires {
+    background: var(--warm-white);
+  }
 
   .questionnaires h2 {
-    font-size: clamp(32px, 4vw, 52px);
+    font-size: clamp(28px, 3.5vw, 46px);
     font-weight: 300;
     letter-spacing: -0.02em;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    margin-bottom: 16px;
   }
 
   .questionnaires > .container > p {
-    font-size: 18px;
-    color: var(--graphite);
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 64px;
+    max-width: 580px;
     line-height: 1.8;
-    max-width: 640px;
-    margin-bottom: 8px;
   }
 
   .quiz-tabs {
     display: flex;
-    border-bottom: 1px solid var(--bone);
+    gap: 0;
     margin-bottom: 0;
-    margin-top: 48px;
+    border-bottom: 2px solid var(--bone);
   }
 
   .quiz-tab {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    padding: 16px 24px;
+    padding: 16px 32px;
     cursor: pointer;
     color: var(--muted);
-    margin-bottom: -1px;
-    transition: all 0.2s ease;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.25s ease;
   }
 
   .quiz-tab.active {
@@ -386,8 +422,18 @@
     border-bottom-color: var(--rust);
   }
 
-  .quiz-panel { display: none; padding-top: 48px; }
-  .quiz-panel.active { display: block; }
+  .quiz-tab:hover {
+    color: var(--charcoal);
+  }
+
+  .quiz-panel {
+    display: none;
+    padding: 48px 0;
+  }
+
+  .quiz-panel.active {
+    display: block;
+  }
 
   .quiz-header {
     display: grid;
@@ -399,170 +445,220 @@
   }
 
   .quiz-info h3 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
-    margin-bottom: 20px;
-    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+    color: var(--charcoal);
   }
 
-  .meta-row { display: flex; flex-direction: column; gap: 12px; }
+  .quiz-info .meta-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
 
   .meta-item {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
     display: flex;
-    gap: 16px;
-    font-size: 14px;
+    gap: 12px;
   }
 
   .meta-item span:first-child {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    min-width: 120px;
-    padding-top: 2px;
+    color: var(--rust);
+    min-width: 80px;
   }
 
-  .meta-item span:last-child { color: var(--graphite); line-height: 1.5; }
+  .quiz-instructions {
+    background: var(--cream);
+    padding: 28px 32px;
+    border-left: 3px solid var(--sage);
+  }
 
   .quiz-instructions p {
     font-size: 15px;
-    color: var(--muted);
-    line-height: 1.8;
-    background: var(--cream);
-    padding: 24px 28px;
-    border-left: 3px solid var(--rust);
+    color: var(--graphite);
+    line-height: 1.75;
   }
 
-  .questions-list { display: flex; flex-direction: column; gap: 2px; margin-bottom: 48px; }
+  .quiz-instructions strong {
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
 
   .question-item {
-    display: flex;
-    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--cream);
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    padding: 20px 28px;
-    background: var(--cream);
     gap: 32px;
+    transition: background 0.2s ease;
   }
 
-  .question-item:hover { background: #E8E1D0; }
-
-  .question-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--rust);
-    margin-right: 12px;
-    min-width: 24px;
+  .question-item:hover {
+    background: var(--cream);
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 -16px;
+    border-radius: 2px;
   }
 
   .question-text {
-    font-size: 16px;
+    font-size: 17px;
     color: var(--graphite);
-    line-height: 1.5;
     font-style: italic;
+  }
+
+  .question-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    margin-right: 8px;
+    letter-spacing: 0.05em;
   }
 
   .rating-input {
     display: flex;
     align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
+    gap: 10px;
   }
 
-  .rating-input input {
-    width: 56px;
-    padding: 8px 12px;
-    border: 1px solid var(--bone);
-    background: white;
-    font-family: 'DM Mono', monospace;
-    font-size: 14px;
+  .rating-input input[type="number"] {
+    width: 64px;
+    height: 44px;
     text-align: center;
+    border: 1px solid var(--bone);
+    background: var(--warm-white);
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
     color: var(--charcoal);
     outline: none;
+    transition: border-color 0.25s ease;
+    -moz-appearance: textfield;
   }
 
-  .rating-input input:focus { border-color: var(--rust); }
+  .rating-input input[type="number"]::-webkit-outer-spin-button,
+  .rating-input input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .rating-input input:focus {
+    border-color: var(--rust);
+  }
 
   .rating-label {
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
+    font-size: 10px;
+    color: var(--bone);
+    letter-spacing: 0.1em;
   }
 
   .section-divider {
-    background: var(--ivory);
-    border: 1px solid var(--bone);
-    padding: 32px 36px;
-    margin-bottom: 32px;
+    margin: 40px 0 32px;
+    padding-top: 32px;
+    border-top: 2px solid var(--charcoal);
   }
 
   .section-divider h4 {
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 16px;
-    color: var(--charcoal);
-    letter-spacing: -0.01em;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 20px;
   }
 
-  .bonus-questions { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+  .bonus-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-  .bonus-item { display: flex; flex-direction: column; gap: 8px; }
+  .bonus-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--cream);
+  }
 
   .bonus-item label {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--graphite);
     font-style: italic;
-    line-height: 1.6;
+    flex: 1;
+    cursor: pointer;
   }
 
-  .checkbox-group { display: flex; gap: 24px; }
+  .bonus-item .checkbox-group {
+    display: flex;
+    gap: 16px;
+  }
 
   .checkbox-group label {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     font-family: 'DM Mono', monospace;
     font-size: 11px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--muted);
     cursor: pointer;
     font-style: normal;
   }
 
-  .score-panel {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 48px;
-    background: var(--charcoal);
-    padding: 48px;
-    margin-top: 16px;
+  .checkbox-group input[type="checkbox"] {
+    accent-color: var(--rust);
+    width: 14px;
+    height: 14px;
   }
 
-  .score-display { display: flex; flex-direction: column; align-items: center; }
+  .score-panel {
+    margin-top: 48px;
+    background: var(--cream);
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .score-display {
+    text-align: center;
+  }
 
   .score-number {
-    font-size: 72px;
+    font-size: 96px;
     font-weight: 300;
-    color: var(--ivory);
+    color: var(--charcoal);
     line-height: 1;
-    letter-spacing: -0.03em;
+    font-family: 'Cormorant Garamond', serif;
+    transition: color 0.5s ease;
   }
 
   .score-max {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.15em;
+    font-size: 14px;
     color: var(--muted);
-    margin-top: 4px;
-    margin-bottom: 20px;
+    letter-spacing: 0.1em;
   }
 
   .score-bar {
-    width: 100%;
-    height: 3px;
-    background: rgba(255,255,255,0.1);
-    margin-bottom: 24px;
+    margin-top: 20px;
+    height: 4px;
+    background: var(--bone);
+    border-radius: 0;
+    overflow: hidden;
   }
 
   .score-bar-fill {
@@ -574,19 +670,19 @@
 
   .score-interpretation {
     padding-left: 48px;
-    border-left: 1px solid rgba(255,255,255,0.1);
+    border-left: 1px solid var(--bone);
   }
 
   .score-interpretation h4 {
     font-size: 22px;
     font-weight: 400;
     margin-bottom: 12px;
-    color: var(--ivory);
+    color: var(--charcoal);
   }
 
   .score-interpretation p {
     font-size: 15px;
-    color: var(--bone);
+    color: var(--muted);
     line-height: 1.75;
     margin-bottom: 16px;
   }
@@ -608,9 +704,14 @@
     margin-top: 32px;
   }
 
-  .calc-btn:hover { background: var(--ivory); color: var(--charcoal); }
+  .calc-btn:hover {
+    background: var(--charcoal);
+  }
 
-  .stats { background: var(--cream); }
+  /* RESEARCH STATS */
+  .stats {
+    background: var(--cream);
+  }
 
   .stats-grid {
     display: grid;
@@ -635,7 +736,10 @@
     letter-spacing: -0.03em;
   }
 
-  .stat-number em { font-style: normal; color: var(--rust); }
+  .stat-number em {
+    font-style: normal;
+    color: var(--rust);
+  }
 
   .stat-label {
     font-family: 'DM Mono', monospace;
@@ -646,9 +750,15 @@
     line-height: 1.6;
   }
 
-  .diagnosis-cta { background: var(--charcoal); padding: 120px 0; }
+  /* DIAGNOSIS CTA */
+  .diagnosis-cta {
+    background: var(--charcoal);
+    padding: 120px 0;
+  }
 
-  .cta-inner { max-width: 800px; }
+  .cta-inner {
+    max-width: 800px;
+  }
 
   .diagnosis-cta h2 {
     font-size: clamp(32px, 4vw, 54px);
@@ -659,7 +769,10 @@
     margin-bottom: 24px;
   }
 
-  .diagnosis-cta h2 em { font-style: italic; color: var(--rust-light); }
+  .diagnosis-cta h2 em {
+    font-style: italic;
+    color: var(--rust-light);
+  }
 
   .diagnosis-cta p {
     color: var(--bone);
@@ -694,9 +807,14 @@
     transition: color 0.25s ease;
   }
 
-  .cta-secondary:hover { color: var(--ivory); }
+  .cta-secondary:hover {
+    color: var(--ivory);
+  }
 
-  .about { background: var(--ivory); }
+  /* ABOUT */
+  .about {
+    background: var(--ivory);
+  }
 
   .about-grid {
     display: grid;
@@ -705,7 +823,10 @@
     align-items: start;
   }
 
-  .about-left { position: sticky; top: 40px; }
+  .about-left {
+    position: sticky;
+    top: 40px;
+  }
 
   .about-name {
     font-size: 32px;
@@ -723,7 +844,11 @@
     margin-bottom: 32px;
   }
 
-  .about-left p { font-size: 15px; color: var(--muted); line-height: 1.75; }
+  .about-left p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.75;
+  }
 
   .about-right h2 {
     font-size: clamp(28px, 3vw, 40px);
@@ -733,29 +858,22 @@
     line-height: 1.2;
   }
 
-  .about-right p { color: var(--graphite); font-size: 17px; line-height: 1.85; margin-bottom: 20px; }
-
-  .about-right h2 em { font-style: italic; color: var(--rust); }
-
-  .about-quote {
-    border-left: 3px solid var(--rust);
-    padding: 24px 32px;
-    margin: 40px 0;
-    background: var(--cream);
+  .about-right p {
+    color: var(--graphite);
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 20px;
   }
 
-  .about-quote p {
-    font-size: 20px;
-    font-style: italic;
+  .about-right p strong {
+    font-weight: 600;
     color: var(--charcoal);
-    line-height: 1.6;
-    margin: 0;
   }
 
+  /* FOOTER */
   footer {
-    background: var(--charcoal);
-    padding: 60px 0;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    background: #141414;
+    padding: 60px 0 40px;
   }
 
   .footer-inner {
@@ -764,61 +882,118 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 24px;
+    margin-bottom: 40px;
   }
 
-  .footer-brand {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
+  .footer-logo {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--ivory);
+    letter-spacing: -0.01em;
   }
 
-  .footer-brand span { color: var(--rust-light); }
+  .footer-logo span {
+    color: var(--rust);
+  }
 
-  .footer-links { display: flex; gap: 32px; align-items: center; }
-
-  .footer-links a {
+  .footer-meta {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    letter-spacing: 0.12em;
     color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s ease;
+    text-transform: uppercase;
   }
 
-  .footer-links a:hover { color: var(--ivory); }
+  .footer-bottom {
+    border-top: 1px solid #2A2A2A;
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 
-  @keyframes fadeInUp {
+  .footer-bottom p {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #444;
+    letter-spacing: 0.08em;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .hero-left > * { animation: fadeInUp 0.8s ease forwards; }
+  .hero-left > * {
+    animation: fadeIn 0.8s ease forwards;
+  }
+
   .hero-left > *:nth-child(1) { animation-delay: 0.1s; opacity: 0; }
   .hero-left > *:nth-child(2) { animation-delay: 0.25s; opacity: 0; }
   .hero-left > *:nth-child(3) { animation-delay: 0.4s; opacity: 0; }
   .hero-left > *:nth-child(4) { animation-delay: 0.55s; opacity: 0; }
 
-  .hero-right > * { animation: fadeInUp 0.8s ease forwards; }
+  .hero-right > * {
+    animation: fadeIn 0.8s ease forwards;
+  }
+
   .hero-right > *:nth-child(1) { animation-delay: 0.3s; opacity: 0; }
   .hero-right > *:nth-child(2) { animation-delay: 0.45s; opacity: 0; }
   .hero-right > *:nth-child(3) { animation-delay: 0.6s; opacity: 0; }
   .hero-right > *:nth-child(4) { animation-delay: 0.75s; opacity: 0; }
 
+  /* RESPONSIVE */
   @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; }
-    .hero-left { padding: 80px 40px 60px; min-height: 60vh; }
+    .hero {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-left {
+      padding: 80px 40px 60px;
+      min-height: 60vh;
+    }
+
     .hero-left::after { display: none; }
-    .hero-right { padding: 60px 40px 80px; }
-    .concept-grid, .about-grid, .quiz-header { grid-template-columns: 1fr; gap: 40px; }
+
+    .hero-right {
+      padding: 60px 40px 80px;
+    }
+
+    .concept-grid,
+    .about-grid,
+    .quiz-header {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
     .about-left { position: static; }
-    .mechanism-steps { grid-template-columns: 1fr; }
-    .stats-grid { grid-template-columns: 1fr 1fr; }
-    .score-panel { grid-template-columns: 1fr; }
-    .score-interpretation { border-left: none; border-top: 1px solid rgba(255,255,255,0.1); padding-left: 0; padding-top: 32px; }
-    .cta-group { flex-direction: column; align-items: flex-start; }
+
+    .mechanism-steps {
+      grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .score-panel {
+      grid-template-columns: 1fr;
+    }
+
+    .score-interpretation {
+      border-left: none;
+      border-top: 1px solid var(--bone);
+      padding-left: 0;
+      padding-top: 32px;
+    }
+
+    .cta-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   @media (max-width: 600px) {
@@ -837,16 +1012,24 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <div class="domain-tag" onclick="toothEgg()" style="cursor:default;"><a href="https://психостоматология.рф" style="color:inherit;text-decoration:none;">Психостоматология №1</a></div>
-    <h1 id="hero-h1"></h1>
-    <p class="hero-sub" id="hero-sub"></p>
-    <a href="#questionnaires" class="scroll-hint">Проверить себя →</a>
+    <div class="domain-tag">psyteeth.com</div>
+    <h1>Parental alienation destroys teeth. <em>The teeth name the alienator.</em></h1>
+    <p class="hero-sub">
+      This is the evidence of child abuse.
+    </p>
+    <p class="scroll-hint">Take the free self-assessment</p>
   </div>
   <div class="hero-right">
     <div class="tooth-graphic">🦷</div>
-    <div class="section-label">Психостоматология №1</div>
-    <div id="hero-right-body"></div>
-    <a href="#questionnaires" class="cta-primary">Проверить свои зубы <span>→</span></a>
+    <div class="section-label">Dental Psychology Research</div>
+    <h2>Parental alienation doesn't only damage the relationship between a child and a parent. <strong>It leaves a physical mark.</strong></h2>
+    <p>
+      In the front teeth. In the exact place everyone can see. Look at your child's two upper front teeth. The left one reflects the relationship with the father. The right one — with the mother. Is something wrong with one of them?
+    </p>
+    <a href="#questionnaires" class="cta-primary">
+      Take the Diagnostic Assessment
+      <span>→</span>
+    </a>
   </div>
 </section>
 
@@ -855,28 +1038,39 @@
   <div class="container">
     <div class="concept-grid">
       <div>
-        <div class="section-label">Что такое провал сепарации</div>
-        <div id="concept-body"></div>
-        <div class="cta-group" style="margin-top: 24px;">
-          <a href="#questionnaires" class="cta-primary">Проверить себя <span>→</span></a>
-          <a href="https://psyteeth.github.io/hi/" class="cta-secondary">Записаться на диагностику <span>→</span></a>
-        </div>
+        <div class="section-label">Dental Psychology Research · The study of psychological patterns in dental health</div>
+        <h2>Five years. <em>130+ documented cases.</em> The same pattern — every time.</h2>
+        <p>
+          This is not a theory. It is a repeating clinical observation: behind every damaged front tooth, there is a relational wound. Behind every damaged front tooth — a parent who was pushed out.
+        </p>
+        <p>
+          The front teeth map to the parents. The rest of the mouth maps to the wider family.
+        </p>
+        <a href="#questionnaires" class="cta-primary" style="margin-top: 8px;">Take the Diagnostic Assessment <span>→</span></a>
       </div>
       <div class="concept-cards">
         <div class="concept-card">
-          <div class="tooth-num">Зуб 21 · Верхний левый центральный резец</div>
-          <h3>Провал сепарации с мамой</h3>
-          <p>Ты так и не стал отдельным от неё человеком. Её настроение до сих пор определяет твоё. Её одобрение до сих пор важнее твоего собственного мнения о себе. Ты не можешь при ней быть собой — смеяться, иметь своё, жить не так, как она считает правильным. <em>Зуб фиксирует это с точностью КТ-снимка.</em></p>
+          <div class="tooth-num">Tooth 21 · Upper Left Central Incisor</div>
+          <h3>Mama's pleaser</h3>
+          <p>Mom made it clear — dad was the problem. Out loud or without a word. Either way — the message came through. Growing up, being like dad felt dangerous — something to hide, something to apologize for. This tooth breaks down in people who learned early that taking up space, being noticed, existing fully — was somehow too much. The strategy that stuck: <em>be good for someone who wants an audience, not intimacy.</em></p>
+
         </div>
         <div class="concept-card">
-          <div class="tooth-num">Зуб 11 · Верхний правый центральный резец</div>
-          <h3>Провал сепарации с папой</h3>
-          <p>Ты так и не вышел из-под его оценки. Его взгляд — реальный или воображаемый — до сих пор решает, чего ты стоишь. Ты либо всю жизнь доказываешь ему что-то, либо всю жизнь от него прячешься. <em>Оба варианта — провал. Оба варианта видны на зубе.</em></p>
-          <p style="margin-top: 12px; font-size: 13px;"><a href="https://t.me/psy_teeth/62142" style="color: var(--rust); text-decoration: none;">→ Живой пример из чата</a></p>
+          <div class="tooth-num">Tooth 11 · Upper Right Central Incisor</div>
+          <h3>Daddy's soldier / super girl</h3>
+          <p>Dad made it clear — mom was the problem. Out loud or without a word. Either way — the message came through. Growing up, being like mom felt shameful — weakness you couldn't afford to show. This tooth breaks down in people who learned that needing help, showing vulnerability, depending on anyone — was a sign of failure. Unbreakable on the outside. <em>Frozen on the inside when it actually matters.</em></p>
+
         </div>
         <div class="concept-card" style="border-left-color: var(--sage);">
-          <div class="tooth-num" style="color: var(--sage);">Главное открытие</div>
-          <div id="card3-body"></div>
+          <div class="tooth-num" style="color: var(--sage);">The Critical Discovery</div>
+          <h3>Your teeth can predict your relationships.</h3>
+          <p><strong>Upper Left Incisor, Tooth 21</strong></p>
+          <p>Men, you'll be drawn to women you want to rescue and make happy. These women will <em>use you</em>. And you'll often feel like no matter what you do, you <em>can't get through to them</em>. Women who are ready to love you? You'll find them <em>boring</em>.</p>
+          <p>Women, there will be two kinds of men in your life. The safe ones — nothing like your father, but no real spark either. And the ones who remind you of your father — you'll try to <em>fix them, change them, reach them. You won't.</em> This will play out with your sons too. You'll pour yourself into women who use you, <em>while taking for granted the men who actually love you</em>.</p>
+          <p style="margin-top: 16px;"><strong>Upper Right Incisor, Tooth 11</strong></p>
+          <p>Men, there will be two kinds of women in your life. The safe ones — nothing like your mother, but no real pull either. And the ones who remind you of your mother — you'll try to <em>fix them, change them, reach them. You won't.</em> This will play out with your daughters too. You'll pour yourself into men who use you, <em>while taking for granted the women who actually love you</em>.</p>
+          <p>Women, you'll be drawn to men you want to rescue and make happy. These men will <em>use you</em>. And you'll often feel like no matter what you do, you <em>can't get through to them</em>. Men who are ready to love you? You'll find them <em>boring</em>.</p>
+          <p style="margin-top: 16px; font-style: italic; color: var(--muted);">We see this in your teeth before you see it yourself.</p>
         </div>
       </div>
     </div>
@@ -886,128 +1080,143 @@
 <!-- MECHANISM -->
 <section class="mechanism">
   <div class="container">
-    <div class="section-label" style="color: var(--rust-light);">Почему это западло</div>
-    <h2>Если у тебя проблемы с верхним левым и/или правым резцом — это не случайность. <em>Это конкретная цена, которую ты платишь каждый день за то, что не сепарируешься.</em></h2>
-    <p>Верхний левый резец — от мамы. Верхний правый — от папы. Пока сепарация не завершена — ресурс уходит не туда. Зубы — маркеры твоего подчинения.</p>
+    <div class="section-label" style="color: var(--rust-light);">How It Works</div>
+    <h2>Teeth as <em>somatic markers</em> of psychological separation</h2>
+    <p>
+      Parental alienation doesn't only rewire a child's thinking — it rewires their nervous system. The chronic stress of suppressing identification with the denigrated parent creates measurable physiological effects, including in dental tissue.
+    </p>
     <div class="mechanism-steps">
       <div class="step">
         <span class="step-num">01</span>
-        <h3>Тобой легко управлять</h3>
-        <p>Человек с незавершённой сепарацией читается за секунду. Его можно остановить через вину, через страх, через апелляцию к долгу. <em>Те, кто умеет это делать — не отказывают себе в удовольствии.</em> Все остальные за это расплачиваются.</p>
+        <h3>Idealization & Splitting</h3>
+        <p>
+          The alienating parent installs a binary: <strong>"I am the good parent. That parent is dangerous."</strong> The child's nervous system maps this split onto their identity — and their teeth.
+        </p>
       </div>
       <div class="step">
         <span class="step-num">02</span>
-        <h3>Ты повторяешь паттерн</h3>
-        <p>Партнёры будут похожи на родителя, от которого ты не отделился. Снова и снова. Не потому что не везёт — <em>потому что лимбическая система ищет знакомое.</em> А знакомое — это тот, с кем сепарация не завершена.</p>
+        <h3>Identification Blocked</h3>
+        <p>
+          Natural identification with the alienated parent becomes neurologically threatening. <strong>"If I'm like him/her, I'm bad."</strong> Shame about visibility. Helplessness when confronted. The limbic system locks down.
+        </p>
       </div>
       <div class="step">
         <span class="step-num">03</span>
-        <h3>Ты передаёшь это детям</h3>
-        <p>Твоя незавершённая сепарация становится их стартовой точкой. Не через разговоры — через то, как ты с ними себя ведёшь. <em>Зубы детей это уже фиксируют.</em> Зубы громче слов. Зубы — это про любовь.</p>
+        <h3>Somatic Trace</h3>
+        <p>
+          When a denigration campaign goes deep enough, it doesn't only change how the child thinks about the targeted parent. <strong>It changes the tooth.</strong> The worse the tooth — the deeper the verdict was written. And the more of that parent was cut off from the child's own identity.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- QUESTIONNAIRES INTRO - replaces existing intro text only -->
+<!-- QUESTIONNAIRES -->
 <section class="questionnaires" id="questionnaires">
   <div class="container">
-    <div class="section-label">Участвуй в исследовании</div>
-    <h2>Проверь теорию психостоматологии сам.</h2>
-    <p>Пройди опросник сам — или дай пройти кому-то из окружения. С проблемным зубом или здоровым — нужны обе группы. Сделай скриншот баллов и пришли нам. Результаты войдут в базу исследования и будут обезличенно опубликованы в инстаграме Психостоматологии №1.</p>
-    <p style="color: var(--muted); font-size: 17px; margin-bottom: 64px; max-width: 580px; line-height: 1.8;">
-      Стоматологи — будет здорово, если захотите подключить своих пациентов.
+    <div class="section-label">Self-Assessment Tools</div>
+    <h2>Diagnostic Questionnaires</h2>
+    <p>
+      The sections above speak to parents fighting for their children. But what if you have been affected by PAS as well?
     </p>
-<div class="quiz-tabs">
-      <button class="quiz-tab active" onclick="switchTab('t21')">Зуб 21 — верхний левый резец</button>
-      <button class="quiz-tab" onclick="switchTab('t11')">Зуб 11 — верхний правый резец</button>
+    <p style="color: var(--muted); font-size: 17px; margin-bottom: 64px; max-width: 580px; line-height: 1.8;">
+      This questionnaire is for adults who have damage, veneers, or recurring issues with their upper central incisors. See whether what we describe matches what you lived.
+    </p>
+
+    <div class="quiz-tabs">
+      <button class="quiz-tab active" onclick="switchTab('t21')">Tooth 21 — Denigrated Father Pattern</button>
+      <button class="quiz-tab" onclick="switchTab('t11')">Tooth 11 — Denigrated Mother Pattern</button>
     </div>
 
-    <!-- ЗУБ 21 -->
+    <!-- TOOTH 21 PANEL -->
     <div class="quiz-panel active" id="panel-t21">
       <div class="quiz-header">
         <div class="quiz-info">
-          <h3>Зуб 21 · Паттерн подчинения матери</h3>
+          <h3>Tooth 21 · Upper Left Central Incisor</h3>
           <div class="meta-row">
-            <div class="meta-item"><span>Связан с</span><span>Мать (идеализирована) / Отец (очернён)</span></div>
-            <div class="meta-item"><span>Основной запрет</span><span>На идентификацию с отцом в точке Б</span></div>
-            <div class="meta-item"><span>Основная функция</span><span>Угождение манипулирующей матери</span></div>
+            <div class="meta-item"><span>Related to</span><span>Mother (idealized) / Father (denigrated)</span></div>
+            <div class="meta-item"><span>Core wound</span><span>Suppressed identification with the father</span></div>
+            <div class="meta-item"><span>Primary mask</span><span>Acceptance (people-pleasing)</span></div>
+            <div class="meta-item"><span>In life</span><span>Cannot bring themselves to hurt narcissistic women</span></div>
+            <div class="meta-item"><span>Takes it out on</span><span>The innocent ones &#8212; sons included</span></div>
+            <div class="meta-item"><span>Their lie</span><span>Blaming men</span></div>
+            <div class="meta-item"><span>Healing</span><span>Reclaim the father. Disappoint the mother.</span></div>
           </div>
         </div>
         <div class="quiz-instructions">
           <p>
-            Оцените каждое утверждение от <strong>0 до 10</strong>, где 0 = совсем не про меня, 10 = полностью про меня.<br><br>
-            Отвечайте честно — не так, как вы себя представляете другим, а так, как оно есть внутри.
+            Rate each statement from <strong>0 to 10</strong>, where 0 = Not true at all and 10 = Completely true.<br><br>
+            Answer honestly — not as you present yourself to others, but as things actually feel inside.
           </p>
         </div>
       </div>
 
       <div class="questions-list" id="questions-t21">
         <div class="question-item">
-          <div><span class="question-num">1.</span><span class="question-text">«Мне стыдно за свою внешность — за то, как я выгляжу.»</span></div>
+          <div><span class="question-num">1.</span><span class="question-text">"I feel not good enough, inferior to others."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="1" oninput="updateScore('t21')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">2.</span><span class="question-text">«Меня беспокоит, как меня видят другие — быть на виду ощущается опасным.»</span></div>
+          <div><span class="question-num">2.</span><span class="question-text">"I feel ashamed or embarrassed when people look at me."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="2" oninput="updateScore('t21')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">3.</span><span class="question-text">«Я делаю себя незаметной — не улыбаюсь открыто, избегаю фотографий, стараюсь не привлекать внимание.»</span></div>
+          <div><span class="question-num">3.</span><span class="question-text">"I feel ugly or frightening — I don't like how I appear."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="3" oninput="updateScore('t21')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">4.</span><span class="question-text">«Я боюсь, что если люди увидят меня настоящей, они уйдут.»</span></div>
+          <div><span class="question-num">4.</span><span class="question-text">"I feel insignificant, worthless, like a nobody."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="4" oninput="updateScore('t21')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">5.</span><span class="question-text">«Я считаю себя некрасивой, отталкивающей или неприятной на вид.»</span></div>
+          <div><span class="question-num">5.</span><span class="question-text">"I feel there is something fundamentally wrong with me."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="5" oninput="updateScore('t21')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">6.</span><span class="question-text">«Я чувствую себя незначимой — как будто могу исчезнуть, и никто не заметит.»</span></div>
+          <div><span class="question-num">6.</span><span class="question-text">"I fear being rejected or pushed away by others."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="6" oninput="updateScore('t21')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">7.</span><span class="question-text">«Я стараюсь выделиться или произвести впечатление — потому что быть обычной значит быть невидимой.»</span></div>
+          <div><span class="question-num">7.</span><span class="question-text">"I fear that people see me as wrong, broken, or not good enough."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="7" oninput="updateScore('t21')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">8.</span><span class="question-text">«Я делаю всё, чтобы меня приняли — угождаю, подстраиваюсь, вписываюсь.»</span></div>
+          <div><span class="question-num">8.</span><span class="question-text">"I please others and accommodate to be accepted — even when I don't want to."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="8" oninput="updateScore('t21')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">9.</span><span class="question-text">«В детстве мне говорили: "Ты некрасивая", "Ты позоришь", "Мне стыдно тебя показывать".»</span></div>
+          <div><span class="question-num">9.</span><span class="question-text">"I hide who I really am — I don't show my true self to others."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="9" oninput="updateScore('t21')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">10.</span><span class="question-text">«Внутри есть ощущение, что у меня нет права занимать место — улыбаться во весь рот, быть на виду, существовать в полную силу.»</span></div>
+          <div><span class="question-num">10.</span><span class="question-text">"I work hard to be accepted because I'm afraid of being rejected."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q21" data-q="10" oninput="updateScore('t21')">
             <span class="rating-label">/ 10</span>
@@ -1015,157 +1224,144 @@
         </div>
       </div>
 
+      <!-- BONUS SECTION -->
       <div class="section-divider">
-        <h4>Дополнительные вопросы — маркеры родительского отчуждения</h4>
+        <h4>Additional Questions — Parental Alienation Markers</h4>
         <div class="bonus-questions">
           <div class="bonus-item">
-            <label>А. «Мне не позволяли открыто восхищаться отцом — мама это пресекала.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="21a"> Да</label><label><input type="checkbox" name="21a2"> Нет</label></div>
+            <label>A. "My father was a handsome or charismatic man."</label>
+            <div class="checkbox-group"><label><input type="checkbox" name="21a"> Yes</label><label><input type="checkbox" name="21a2"> No</label></div>
           </div>
           <div class="bonus-item">
-            <label>Б. «Мой отец был красивым или харизматичным мужчиной.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="21b"> Да</label><label><input type="checkbox" name="21b2"> Нет</label></div>
+            <label>B. "I was not allowed to openly admire my father — my mother discouraged it."</label>
+            <div class="checkbox-group"><label><input type="checkbox" name="21b"> Yes</label><label><input type="checkbox" name="21b2"> No</label></div>
           </div>
           <div class="bonus-item">
-            <label>В. «Мама говорила, что отец плохой, опасный или ничтожный.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="21c"> Да</label><label><input type="checkbox" name="21c2"> Нет</label></div>
+            <label>C. "I feel the urge to 'fix' men — including sons or male partners."</label>
+            <div class="checkbox-group"><label><input type="checkbox" name="21c"> Yes</label><label><input type="checkbox" name="21c2"> No</label></div>
           </div>
           <div class="bonus-item">
-            <label>Г. «Я старалась не быть похожей на отца.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="21d"> Да</label><label><input type="checkbox" name="21d2"> Нет</label></div>
+            <label>D. "My mother said my father was bad, dangerous, or pathetic."</label>
+            <div class="checkbox-group"><label><input type="checkbox" name="21d"> Yes</label><label><input type="checkbox" name="21d2"> No</label></div>
           </div>
           <div class="bonus-item">
-            <label>Д. «Я получила послание, что быть похожей на отца — значит быть плохой или неправильной.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="21e"> Да</label><label><input type="checkbox" name="21e2"> Нет</label></div>
+            <label>E. "I received the message that being like my father would make me bad or wrong."</label>
+            <div class="checkbox-group"><label><input type="checkbox" name="21e"> Yes</label><label><input type="checkbox" name="21e2"> No</label></div>
           </div>
         </div>
         <p style="margin-top: 20px; font-size: 14px; color: var(--muted); font-style: italic;">
-          Если вы ответили ДА на А, В или Г — это указывает на механизм «расщепления» в основе разрушения зуба 21: «Отец был ценным → Мама сказала, что отец плохой → Быть заметным (как отец) = я плохой → Стыд за видимость → Зуб 21 реагирует».
+          If you answered YES to B, D, or E — this indicates the "splitting" mechanism at the core of tooth 21 destruction: "Father was valuable → Mother said father is bad → Being visible (like father) = I am bad → Shame about visibility → Tooth 21 under attack."
         </p>
       </div>
 
       <div class="score-panel" id="score-panel-t21">
         <div class="score-display">
           <div class="score-number" id="score-t21">0</div>
-          <div class="score-max">/ 100 баллов</div>
+          <div class="score-max">/ 100 points</div>
           <div class="score-bar"><div class="score-bar-fill" id="bar-t21"></div></div>
-          <button class="calc-btn" onclick="calculateScore('t21')">Подсчитать результат</button>
+          <button class="calc-btn" onclick="calculateScore('t21')">Calculate Score</button>
         </div>
         <div class="score-interpretation" id="interp-t21">
-          <h4>Интенсивность паттерна</h4>
-          <p>Заполните опросник и нажмите «Подсчитать результат», чтобы узнать своё значение и что оно означает для зуба 21.</p>
+          <h4>Your Pattern Intensity</h4>
+          <p>Complete the questionnaire and press Calculate Score to see your result and what it means for tooth 21.</p>
           <p style="font-size: 13px;">
-            <strong>0–30:</strong> Слабый паттерн или его отсутствие<br>
-            <strong>31–60:</strong> Умеренный паттерн — стоит наблюдать<br>
-            <strong>61–100:</strong> Выраженный паттерн — зуб, вероятно, серьёзно пострадал
+            <strong>0–30:</strong> Weak or no pattern<br>
+            <strong>31–60:</strong> Moderate pattern — worth monitoring<br>
+            <strong>61–100:</strong> Strong pattern — tooth likely severely affected
           </p>
         </div>
       </div>
     </div>
 
-    <!-- EMAIL TEMPLATE T21 -->
-    <div class="quiz-panel" id="panel-t21-email" style="display:none; margin-top: 32px; background: var(--ivory); border: 1px solid rgba(0,0,0,0.08); border-radius: 4px; padding: 32px; max-width: 680px;">
-      <div class="section-label" style="color: var(--rust); margin-bottom: 16px;">Участвовать в исследовании</div>
-      <p style="font-size: 15px; color: var(--charcoal); margin-bottom: 8px;">Пройди опросник, скопируй результат и отправь — это займёт минуту. Приложи скриншот с баллами.</p>
-      <p style="font-size: 14px; color: var(--charcoal); opacity: 0.7; margin-bottom: 20px;">Хочешь проверить кого-то другого? Дай им пройти опросник и пришли их результат тоже.</p>
-      <pre id="email-template-t21" style="background: #f0ebe0; padding: 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; border-radius: 2px; white-space: pre-wrap; color: var(--charcoal);">Зуб 21 — [здоровый / пломба / кариес / коронка / удалён]
-Баллы: ___/100
-Пол: М/Ж
-Возраст: ___
-Страна: ___
-
-(приложи скриншот с результатом)</pre>
-      <div style="display:flex; gap: 12px; margin-top: 16px; flex-wrap: wrap;">
-        <button onclick="sendTelegram('t21')" style="background: var(--rust); color: white; border: none; padding: 12px 24px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;">→ Написать в Telegram</button>
-        <button onclick="sendEmail('t21')" style="background: transparent; color: var(--rust); border: 1px solid var(--rust); padding: 12px 24px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;">→ Отправить на почту</button>
-      </div>
-    </div>
-
-    <!-- ЗУБ 11 -->
+    <!-- TOOTH 11 PANEL -->
     <div class="quiz-panel" id="panel-t11">
       <div class="quiz-header">
         <div class="quiz-info">
-          <h3>Зуб 11 · Паттерн подчинения отцу</h3>
+          <h3>Tooth 11 · Upper Right Central Incisor</h3>
           <div class="meta-row">
-            <div class="meta-item"><span>Связан с</span><span>Отец (идеализирован) / Мать (очернена)</span></div>
-            <div class="meta-item"><span>Основной запрет</span><span>На идентификацию с матерью в точке Б</span></div>
-            <div class="meta-item"><span>Основная функция</span><span>Не показывать слабость</span></div>
+            <div class="meta-item"><span>Related to</span><span>Father (idealized) / Mother (denigrated)</span></div>
+            <div class="meta-item"><span>Core wound</span><span>Suppressed identification with the mother</span></div>
+            <div class="meta-item"><span>Primary mask</span><span>Power (false strength)</span></div>
+            <div class="meta-item"><span>In life</span><span>Cannot bring themselves to hurt narcissistic men</span></div>
+            <div class="meta-item"><span>Takes it out on</span><span>The innocent ones &#8212; daughters included</span></div>
+            <div class="meta-item"><span>Their lie</span><span>Blaming women</span></div>
+            <div class="meta-item"><span>Healing</span><span>Reclaim the mother. Disappoint the father.</span></div>
           </div>
         </div>
         <div class="quiz-instructions">
           <p>
-            Оцените каждое утверждение от <strong>0 до 10</strong>, где 0 = совсем не про меня, 10 = полностью про меня.<br><br>
-            Отвечайте честно — не так, как вы себя представляете другим, а так, как оно есть внутри.
+            Rate each statement from <strong>0 to 10</strong>, where 0 = Not true at all and 10 = Completely true.<br><br>
+            Answer honestly — not as you present yourself to others, but as things actually feel inside.
           </p>
         </div>
       </div>
 
       <div class="questions-list" id="questions-t11">
         <div class="question-item">
-          <div><span class="question-num">1.</span><span class="question-text">«Я чувствую, что со мной что-то не так — что-то, что сложно назвать.»</span></div>
+          <div><span class="question-num">1.</span><span class="question-text">"I feel inadequate or different from others in a way that's hard to explain."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="1" oninput="updateScore('t11')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">2.</span><span class="question-text">«Отец критиковал меня, высмеивал или обесценивал — что бы я ни делала, этого было недостаточно.»</span></div>
+          <div><span class="question-num">2.</span><span class="question-text">"My father criticized me, ridiculed me, or belittled my efforts."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="2" oninput="updateScore('t11')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">3.</span><span class="question-text">«Когда я пытаюсь высказаться или отстоять себя, я чувствую себя смешной — как будто без зубов.»</span></div>
+          <div><span class="question-num">3.</span><span class="question-text">"I feel ridiculous or 'toothless' when I try to show up or assert myself."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="3" oninput="updateScore('t11')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">4.</span><span class="question-text">«Когда мне нужно защитить себя или провести границу — особенно с мужчинами — я замираю.»</span></div>
+          <div><span class="question-num">4.</span><span class="question-text">"I freeze when I need to defend myself or set a boundary — especially with men."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="4" oninput="updateScore('t11')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">5.</span><span class="question-text">«Когда мужчина нарушает мои границы, я чувствую себя беспомощной — даже если внешне выгляжу спокойно.»</span></div>
+          <div><span class="question-num">5.</span><span class="question-text">"I feel helpless when a man violates my boundaries, even though I appear composed."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="5" oninput="updateScore('t11')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">6.</span><span class="question-text">«Я иду вперёд с силой и компетентностью — потому что позволить кому-то увидеть мою уязвимость слишком опасно.»</span></div>
+          <div><span class="question-num">6.</span><span class="question-text">"I present myself as strong and capable to hide inner helplessness."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="6" oninput="updateScore('t11')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">7.</span><span class="question-text">«Я подстраиваюсь, чтобы вписаться — соглашаюсь, адаптируюсь, слежу, чтобы другим было комфортно со мной.»</span></div>
+          <div><span class="question-num">7.</span><span class="question-text">"I do everything to be accepted — I accommodate, people-please, fit in."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="7" oninput="updateScore('t11')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">8.</span><span class="question-text">«В детстве от отца или других мужчин я слышала, что я смешная, слабая или неспособная.»</span></div>
+          <div><span class="question-num">8.</span><span class="question-text">"I received messages — from father or male figures — that I was ridiculous, inadequate, or helpless."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="8" oninput="updateScore('t11')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">9.</span><span class="question-text">«Люди видят собранную версию меня. Остальное я держу при себе.»</span></div>
+          <div><span class="question-num">9.</span><span class="question-text">"I hide my vulnerability — I only allow others to see my 'strong' version."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="9" oninput="updateScore('t11')">
             <span class="rating-label">/ 10</span>
           </div>
         </div>
         <div class="question-item">
-          <div><span class="question-num">10.</span><span class="question-text">«Проявить себя в полную силу — на работе, в группе, в отношениях — ощущается как разоблачение, которое я не могу объяснить.»</span></div>
+          <div><span class="question-num">10.</span><span class="question-text">"I feel ashamed to show myself fully — at work, in groups, in relationships."</span></div>
           <div class="rating-input">
             <input type="number" min="0" max="10" placeholder="0" class="q11" data-q="10" oninput="updateScore('t11')">
             <span class="rating-label">/ 10</span>
@@ -1174,127 +1370,60 @@
       </div>
 
       <div class="section-divider">
-        <h4>Паттерн замирания — ключевой маркер зуба 11</h4>
+        <h4>The Freeze Pattern — Key Marker for Tooth 11</h4>
         <p style="font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.75;">
-          Вопрос 4 («Я замираю, когда нужно защитить себя») — единственный наиболее диагностический вопрос для зуба 11. Высокий балл (7–10) подтверждает основной механизм: альфа-жертва-отец запрограммировал «я не могу дать отпор отцу» — и она не могла → замирание стало реакцией по умолчанию → резец утратил свою функцию → разрушение зуба.
+          Question 4 ("I freeze when I need to defend myself") is the single most diagnostic question for tooth 11. A high score (7–10) confirms the core mechanism: the Alpha-Victim father programmed "I cannot fight back against father" → freezing became the default → the incisor lost its function → tooth deterioration.
         </p>
         <p style="font-size: 14px; color: var(--rust); font-family: 'DM Mono', monospace; letter-spacing: 0.1em;">
-          ВАЖНО: Показатели по зубу 11 статистически более подавлены, чем по зубу 21. Если ваш зуб серьёзно повреждён, а балл низкий — маска силы, вероятно, скрывает паттерн от вас самих.
-        </p>
-      </div>
-
-      <div class="section-divider">
-        <h4>Дополнительные вопросы — маркеры родительского отчуждения</h4>
-        <div class="bonus-questions">
-          <div class="bonus-item">
-            <label>А. «Мне не позволяли открыто восхищаться мамой — отец это пресекал.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11a"> Да</label><label><input type="checkbox" name="11a2"> Нет</label></div>
-          </div>
-          <div class="bonus-item">
-            <label>Б. «Моя мама была красивой или харизматичной женщиной.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11b"> Да</label><label><input type="checkbox" name="11b2"> Нет</label></div>
-          </div>
-          <div class="bonus-item">
-            <label>В. «Отец говорил, что мама плохая, неправильная или недостаточно хорошая.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11c"> Да</label><label><input type="checkbox" name="11c2"> Нет</label></div>
-          </div>
-          <div class="bonus-item">
-            <label>Г. «Я старалась не быть похожей на маму.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11d"> Да</label><label><input type="checkbox" name="11d2"> Нет</label></div>
-          </div>
-          <div class="bonus-item">
-            <label>Д. «Я считаю, что мой отец заслуживал лучшей жены, чем моя мама.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11e"> Да</label><label><input type="checkbox" name="11e2"> Нет</label></div>
-          </div>
-          <div class="bonus-item">
-            <label>Е. «Я чувствую потребность "исправлять" мужчин — в том числе сыновей или партнёров.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11f"> Да</label><label><input type="checkbox" name="11f2"> Нет</label></div>
-          </div>
-        </div>
-        <p style="margin-top: 20px; font-size: 14px; color: var(--muted); font-style: italic;">
-          Если вы ответили ДА на А, В или Г — это указывает на механизм «расщепления» в основе разрушения зуба 11: «Мама была ценной → Отец сказал, что мама плохая → Быть похожим на маму = я плохой → Стыд за видимость → Зуб 11 реагирует».
+          NOTE: Tooth 11 scores are statistically more suppressed than tooth 21. If your tooth is severely damaged but your score is low — the Power mask is likely hiding the pattern from you.
         </p>
       </div>
 
       <div class="score-panel" id="score-panel-t11">
         <div class="score-display">
           <div class="score-number" id="score-t11">0</div>
-          <div class="score-max">/ 100 баллов</div>
+          <div class="score-max">/ 100 points</div>
           <div class="score-bar"><div class="score-bar-fill" id="bar-t11"></div></div>
-          <button class="calc-btn" onclick="calculateScore('t11')">Подсчитать результат</button>
+          <button class="calc-btn" onclick="calculateScore('t11')">Calculate Score</button>
         </div>
         <div class="score-interpretation" id="interp-t11">
-          <h4>Интенсивность паттерна</h4>
-          <p>Заполните опросник и нажмите «Подсчитать результат», чтобы узнать своё значение и что оно означает для зуба 11.</p>
+          <h4>Your Pattern Intensity</h4>
+          <p>Complete the questionnaire and press Calculate Score to see your result and what it means for tooth 11.</p>
           <p style="font-size: 13px;">
-            <strong>0–30:</strong> Слабый паттерн или его отсутствие<br>
-            <strong>31–60:</strong> Умеренный паттерн — стоит наблюдать<br>
-            <strong>61–100:</strong> Выраженный паттерн — зуб, вероятно, серьёзно пострадал
+            <strong>0–30:</strong> Weak or no pattern<br>
+            <strong>31–60:</strong> Moderate pattern — worth monitoring<br>
+            <strong>61–100:</strong> Strong pattern — tooth likely severely affected
           </p>
         </div>
       </div>
     </div>
 
-    <!-- EMAIL TEMPLATE T11 -->
-    <div class="quiz-panel" id="panel-t11-email" style="display:none; margin-top: 32px; background: var(--ivory); border: 1px solid rgba(0,0,0,0.08); border-radius: 4px; padding: 32px; max-width: 680px;">
-      <div class="section-label" style="color: var(--rust); margin-bottom: 16px;">Участвовать в исследовании</div>
-      <p style="font-size: 15px; color: var(--charcoal); margin-bottom: 8px;">Пройди опросник, скопируй результат и отправь — это займёт минуту. Приложи скриншот с баллами.</p>
-      <p style="font-size: 14px; color: var(--charcoal); opacity: 0.7; margin-bottom: 20px;">Хочешь проверить кого-то другого? Дай им пройти опросник и пришли их результат тоже.</p>
-      <pre id="email-template-t11" style="background: #f0ebe0; padding: 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; border-radius: 2px; white-space: pre-wrap; color: var(--charcoal);">Зуб 11 — [здоровый / пломба / кариес / коронка / удалён]
-Баллы: ___/100
-Пол: М/Ж
-Возраст: ___
-Страна: ___
-
-(приложи скриншот с результатом)</pre>
-      <div style="display:flex; gap: 12px; margin-top: 16px; flex-wrap: wrap;">
-        <button onclick="sendTelegram('t11')" style="background: var(--rust); color: white; border: none; padding: 12px 24px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;">→ Написать в Telegram</button>
-        <button onclick="sendEmail('t11')" style="background: transparent; color: var(--rust); border: 1px solid var(--rust); padding: 12px 24px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;">→ Отправить на почту</button>
-      </div>
-    </div>
-
   </div>
 </section>
+
 <!-- STATS -->
 <section class="stats">
   <div class="container">
-    <div class="section-label">Данные исследований</div>
+    <div class="section-label">Research Data</div>
     <h2 style="font-size: clamp(28px, 3.5vw, 44px); font-weight: 300; letter-spacing: -0.02em; max-width: 600px; line-height: 1.2;">
-      130+ случаев. Один и тот же паттерн. Каждый раз.
+      Five years of clinical observation. The numbers don't shift.
     </h2>
     <div class="stats-grid">
       <div class="stat-item">
         <div class="stat-number">130<em>+</em></div>
-        <div class="stat-label">Задокументированных случаев связи провала сепарации и состояния зубов</div>
+        <div class="stat-label">Documented cases in the first year of targeted separation research</div>
       </div>
       <div class="stat-item">
         <div class="stat-number">8<em>/10</em></div>
-        <div class="stat-label">Случаев — незавершённая сепарация с матерью</div>
+        <div class="stat-label">Cases where the mother is the idealizing alienator</div>
       </div>
       <div class="stat-item">
         <div class="stat-number">100<em>%</em></div>
-        <div class="stat-label">Всплеск стресса на ЭЭГ при мысли о сепарации от манипулирующего родителя</div>
+        <div class="stat-label">EEG stress spike when imagining joy with the denigrated parent — in front of the alienating one</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">5<em>+</em></div>
-        <div class="stat-label">Лет наблюдений за связью между зубами и отношениями</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="diagnosis-cta">
-  <div class="container">
-    <div class="cta-inner">
-      <div class="section-label" style="color: var(--rust-light);">Что дальше</div>
-      <h2>Завершить сепарацию — это не примириться с родителем. <em>Это перестать жить для его одобрения.</em></h2>
-      <p>Это про то, чтобы его мнение перестало определять твои решения, твоих партнёров, твои деньги и твою улыбку. Это про то, чтобы ржать там, где раньше нужно было быть правильным.</p>
-      <p>Начни с диагностики. Узнай, какой конкретный паттерн стоит за твоим зубом — и что конкретно делать дальше.</p>
-      <p class="fine-print">Бесплатно. Без обязательств.</p>
-      <div class="cta-group">
-        <a href="#questionnaires" class="cta-primary">Пройти опросник →</a>
-        <a href="https://psyteeth.github.io/hi/" class="cta-secondary">Записаться на диагностику →</a>
+        <div class="stat-number">5</div>
+        <div class="stat-label">Years researching the connection between dental deterioration and relational patterns</div>
       </div>
     </div>
   </div>
@@ -1305,15 +1434,53 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-left">
-        <div class="section-label">Кто за этим стоит</div>
-        <div id="about-body"></div>
+        <div class="section-label">Who is behind this</div>
+        <div class="about-name">Anton Kazakov</div>
+        <div class="about-title">Psychologist · Pioneer researcher in dental psychology</div>
+        <p>Researcher of psychological mechanisms behind dental deterioration since 2020. Author of patented diagnostic methods. EEG-based research protocol measuring stress index, cognitive control, and limbic system activation.</p>
+        <p style="margin-top: 16px;">My father was alienated. I grew up as a people-pleaser. My ex-partner had chronic problems with tooth 21 — and after our separation, our son developed the same issue in the same tooth.</p>
+        <p style="margin-top: 16px;">That is when the research became personal. And when the pattern became impossible to ignore.</p>
       </div>
       <div class="about-right">
-        <h2>Третья сепарация — <em>единственная, которую ты делаешь сам.</em></h2>
-        <p>Первые две природа делала за тебя — через биологию, через зубы, через гормоны. Третью не сделает никто. Без биологического окна. Без поддержки инстинктов. Часто — вопреки всему, что говорит: не трогай, не буди, потерпи.</p>
-        <p>Именно поэтому большинство её не завершает. Не потому что слабые — потому что никто не объяснил, что это нужно сделать.</p>
-        <p>Психостоматология №1 работает с 2020 года. Прицельная работа над сепарацией — с осени 2025. Протокол ещё никто не завершил до конца. Но изменения уже есть — в поведении, в реакциях, в отношениях. И в зубах. Поговорить с теми, кто идёт этот путь — <a href="https://t.me/psy_teeth" style="color: var(--rust); text-decoration: none;">чат Психостоматологии №1</a>.</p>
-        <p><em>Зубы громче слов. Зубы — это про любовь.</em></p>
+        <h2>The research began with <em>my own tooth</em> — and a proposed surgery I refused.</h2>
+        <p>
+          In 2018, a dentist recommended resection of the root apex of my tooth 21. Instead of agreeing, I went looking for the psychological root of the problem. What I found changed the direction of my life and work entirely.
+        </p>
+        <p>
+          Over the following years, I discovered that behind every chronically damaged tooth, there was a predictable relational pattern — and behind that pattern, always, some form of parental alienation. A parent denigrated. A campaign running for years. An identification blocked. A self divided against itself.
+        </p>
+        <p>
+          <strong>The tooth doesn't cause the problem. It reports it.</strong> And when the psychological pattern shifts — when genuine separation from the alienating parent begins — we observe changes in the dental tissue as well.
+        </p>
+        <p>
+          This is the frontier of dental psychology: reading teeth as somatic markers of relational wounds. And giving PAS researchers, therapists, and families a new way to see what's already written in the mouth.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNOSIS CTA -->
+<section class="diagnosis-cta">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="section-label" style="color: var(--rust-light);">This Research Needs to Travel</div>
+      <h2>If what you read here matches <em>what you lived</em> — share it.</h2>
+      <p>
+        With a parent fighting in court. With a therapist working with alienated families. With a researcher looking for somatic markers of childhood trauma.
+      </p>
+      <p>
+        Psychostomatology is five years old. The pattern is consistent. What it needs now is wider observation — more cases, more languages, more eyes on the data.
+      </p>
+      <p>
+        If you have questions, want to share your results, or see research potential here — write to us.
+      </p>
+      <p class="fine-print">No obligation · No sales · Just the conversation</p>
+      <div class="cta-group">
+        <a href="/cdn-cgi/l/email-protection#acdcdfd5d8c9c9d8c4eccbc1cdc5c082cfc3c1" class="cta-primary">
+          Questions or results to share? Write us →
+        </a>
+        <a href="#questionnaires" class="cta-secondary">Start with the questionnaire first</a>
       </div>
     </div>
   </div>
@@ -1323,281 +1490,52 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-logo">Психостоматология<span>№1</span></div>
-      <div class="footer-meta">Психостоматологические исследования · С 2020 года</div>
-      <div class="footer-meta" style="margin-top:8px;">
-        <a href="https://psyteeth.com" style="color:var(--muted);text-decoration:none;margin-right:16px;">psyteeth.com</a>
-        <a href="https://psyteeth.ru/#blog" style="color:var(--muted);text-decoration:none;margin-right:16px;">psyteeth.ru/блог</a>
-        <a href="/cdn-cgi/l/email-protection#7303000a071616071b33141e121a1f5d101c1e" style="color:var(--muted);text-decoration:none;"><span class="__cf_email__" data-cfemail="3646454f425353425e76515b575f5a1855595b">[email&#160;protected]</span></a>
-      </div>
+      <div class="footer-logo">Psy<span>Teeth</span>.com</div>
+      <div class="footer-meta">Dental Psychology Research · Since 2020</div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Антон Казаков · психостоматология.рф</p>
-      <p>Результаты исследования носят наблюдательный характер. Сайт не предоставляет медицинских или стоматологических диагнозов.</p>
+      <p>© 2026 Anton Kazakov · psyteeth.com</p>
+      <p>Research findings are observational. This site does not provide medical or dental diagnosis. Questions? Write us at <a href="/cdn-cgi/l/email-protection#daaaa9a3aebfbfaeb29abdb7bbb3b6f4b9b5b7" style="color:#444"><span class="__cf_email__" data-cfemail="d9a9aaa0adbcbcadb199beb4b8b0b5f7bab6b4">[email&#160;protected]</span></a></p>
     </div>
   </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-const aboutVariants = [
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Исследую связь зубов и сепарации с 2020 года. Разработал и запатентовал психостоматологическую диагностику. Работаю с ЭЭГ — измеряю нейробиологический след незавершённой сепарации в реальном времени.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>В 2018 году стоматолог предложил мне резекцию зуба 21. Я отказался и начал исследовать. Оказалось — зуб отражал незавершённую сепарацию от матери. С тех пор 130+ случаев. Один паттерн. Каждый раз.</p><p style="margin-top:16px;font-style:italic;">Посвящается моему отцу. И моим детям — Эрику и Софии.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Меня называют шарлатаном те, кто защищает своих альфа-жертв.</p><p style="margin-top:16px;">Исследую связь зубов и сепарации с 2020 года. Патент. ЭЭГ. 130+ случаев.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>С 2020 года. 130+ случаев. ЭЭГ. Патент.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Я занимаюсь психостоматологией потому что видел, как провал сепарации разрушает людей — их зубы, их отношения, их детей. 130+ диагностик. Это можно измерить. Это можно изменить.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>У моего сына Эрика начал разрушаться зуб 21 — точно как у его мамы. Я знал что это значит. Именно поэтому я занимаюсь тем, чем занимаюсь.</p><p style="margin-top:16px;">Психостоматология — это не про зубы. Это про то, что мы передаём детям.</p><p style="margin-top:16px;font-style:italic;">Посвящается моему отцу. И моим детям — Эрику и Софии.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Однажды мне сказали удалить верхушку корня зуба 21. Я не захотел. Начал разбираться. Разобрался больше чем планировал.</p><p style="margin-top:16px;">Пять лет. 130+ человек. ЭЭГ. Патент. Школа коммуникации.</p><p style="margin-top:16px;font-style:italic;">Посвящается моему отцу. И моим детям — Эрику и Софии.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Мой отец был отчуждён из моей жизни. Я вырос защищая мать и не понимая почему. Зуб 21 начал разрушаться. Потом я начал понимать.</p><p style="margin-top:16px;">С 2020 года исследую то, что зубы знают раньше нас.</p><p style="margin-top:16px;font-style:italic;">Посвящается моему отцу. И моим детям — Эрику и Софии.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>2018 — отказ от резекции.<br>2020 — начало исследования.<br>2025 — протокол сепарации.<br>130+ случаев. Один паттерн. Каждый раз.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Почему у людей снова разрушается зуб, который уже лечили? Почему у детей те же зубы что у родителей? Почему стоматология не отвечает на эти вопросы?</p><p style="margin-top:16px;">Я занимаюсь этим с 2020 года. И у меня есть ответы.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Стоматологи говорят меньше сладкого. Психологи говорят проработай детство. Я говорю: покажи зубы — расскажу про маму.</p><p style="margin-top:16px;">С 2020 года. 130+ случаев. Зубы не врут.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Я верю, что за каждым сломанным зубом стоит история любви. Не той, что была. А той, которой не дали случиться.</p><p style="margin-top:16px;">Исследую это с 2020 года. Чтобы она всё-таки случилась.</p><p style="margin-top:16px;font-style:italic;">Посвящается моему отцу. И моим детям — Эрику и Софии.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Где-то во вселенной существует версия тебя, которая завершила сепарацию. У неё здоровые зубы. Она смеётся там, где ты молчишь.</p><p style="margin-top:16px;">Я помогаю найти к ней дорогу. С 2020 года.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>В этом городе два шерифа — мама и папа. Ты вырос их шестёркой. Носишь их звезду. Исполняешь их закон.</p><p style="margin-top:16px;">Пора сдать значок. С 2020 года помогаю сделать это без стрельбы.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Тёмная сторона не снаружи. Она в голосе, который говорит тебе кем надо быть.</p><p style="margin-top:16px;">Люк тоже думал что Дарт Вейдер — враг. Пока не понял что это отец. С 2020 года исследую эту галактику.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  },
-  {
-    html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Снаружи — взрослый самостоятельный человек. Внутри — до сих пор трансформируется в того, кого хотела видеть мама.</p><p style="margin-top:16px;">Автоботы не выбирают форму. Люди — могут. С 2020 года помогаю сделать этот выбор.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
-  }
-];
-const card3Variants = [
-  {
-    html: '<h3>Провал сепарации — это не прошлое.</h3><p>Это то, что происходит прямо сейчас. Ты объясняешь свои решения людям, которые тебя не спрашивали. Ты злишься на партнёра за то, что ему можно то, чего тебе нельзя. Ты помогаешь тем, кто тебя использует — и не можешь остановиться. <em>Это не характер. Это паттерн. И у него есть адрес во рту.</em></p>'
-  },
-  {
-    html: '<h3>Ты выбираешь партнёров, с которыми хочется улыбаться — и теряешь тех, кто готов тебя любить.</h3><p>Ты злишься на чужую свободу. Ты устаёшь от людей, которые ни в чём не нуждаются. Это не случайность — это незавершённая сепарация в действии каждый день.</p>'
-  },
-  {
-    html: '<h3>Тебя легко остановить через вину.</h3><p>Через долг. Через «после всего, что я для тебя сделала». Ты это знаешь. Ты ненавидишь это в себе. И всё равно останавливаешься. <em>Потому что сепарация не завершена.</em></p>'
-  },
-  {
-    html: '<h3>Ты не можешь радоваться рядом с тем, от кого сепарация не завершена.</h3><p>Смех застревает. Успех надо прятать. Счастье — виниться. Это не скромность. Это цена провала сепарации — каждый день.</p>'
-  },
-  {
-    html: '<h3>Главное открытие. По зубам можно предсказать отношения.</h3><h4 style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--rust);margin:1.2em 0 0.6em;">Деформированный верхний левый резец, зуб 21</h4><ul><li><em>у мужчин:</em> вас будет тянуть к женщинам, которых хочется спасти и осчастливить. Они будут вас использовать. Вы будете раз за разом чувствовать, что как бы вы ни старались — вам не достучаться и не дотянуть. Что касается женщин, которые готовы вас любить? Они будут казаться вам скучными.</li><li><em>у женщин:</em> в вашей жизни будет два типа мужчин. Безопасные — совсем не похожие на отца, но и не вызывающие либиду. И те, кто напоминает отца — вы будете пытаться их починить, изменить, достучаться до них. У вас не получится. Вы будете манипулятивны с сыновьями. Вы будете вкладываться в тех, кто вас использует, и не замечать тех, кто вас любит.</li></ul><h4 style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--rust);margin:2em 0 0.6em;padding-top:1.2em;border-top:1px solid rgba(0,0,0,0.08);">Деформированный верхний правый резец, зуб 11</h4><ul><li><em>у мужчин:</em> в вашей жизни будут два типа женщин. Безопасные — совсем не похожие на мать, но и энтузиазма не вызывающие. И те, кто напоминает мать — вы будете пытаться их починить, изменить, достучаться. У вас не получится. Вы будете манипулятивны с дочерьми. Вы будете вкладываться в тех, кто вас использует, и не замечать тех, кто вас любит.</li><li><em>у женщин:</em> вас будет тянуть к мужчинам, которых хочется спасти и осчастливить. Они будут вас использовать. И вы будете раз за разом чувствовать, что как бы вы ни старались — вам не достучаться и не дотянуть. Что касается мужчин, которые готовы вас любить? Они будут казаться вам скучными.</li></ul><p><em>Смотрите КТ зубов партнёра перед долгосрочными отношениями. Зубы в отношениях портиться не должны.</em></p>'
-  }
-];
-const conceptVariants = [
-  {
-    html: '<h2>Сепарация должна была случиться дважды. <em>У большинства — не случилась ни разу.</em></h2><p>Первая — в три года вместе с ростом молочных зубов. Вторая — в подростковом вместе с ростом коренных зубов. Первые сепарации делает природа. Но если кому-то в семье было выгодно, чтобы ты не отделился — природа проиграла.</p><p>Третья сепарация — единственная осознанная. Её никто не делает за тебя. Без неё зубы продолжат разрушаться.</p>'
-  },
-  {
-    html: '<h2>Провал сепарации — это не травма. Не чья-то вина. <em>Это твоё личное западло.</em></h2><p>Ты взрослый человек, который до сих пор живёт для одобрения родительской фигуры. Это отражается на решениях, на партнёрах, на деньгах. И на зубах — особенно на передних.</p>'
-  },
-  {
-    html: '<h2>Мы измеряли это на ЭЭГ.</h2><p>При мысли о сепарации от манипулирующего родителя — стресс-индекс взлетает как при реальной угрозе выживанию. Не метафора. Цифры. Именно поэтому никто не хочет завершать сепарацию. И именно поэтому зубы продолжают разрушаться.</p>'
-  },
-  {
-    html: '<h2>Зубы твоих детей — <em>это твой портрет.</em></h2><p>Не генетика. Не сладкое. То, как ты с ними — так и выглядят их передние зубы. Провал сепарации передаётся. Мы это видим с 2020 года.</p>'
-  },
-  {
-    html: '<h2>Если у твоего ребёнка проблемы с передними зубами — <em>посмотри на свои.</em></h2><p>Скорее всего найдёшь то же самое. Провал сепарации не наследуется генетически — он передаётся через то, как ты живёшь рядом с ним.</p>'
-  },
-  {
-    html: '<h2>Эрих Фромм написал об этом книгу в 1941 году. <em>Назвал её «Бегство от свободы».</em></h2><p>Люди не боятся, что их бросят. Они боятся уйти сами. Сепарация — это не разрыв. Это выход из зависимости от чужого одобрения. Большинство так и не решаются. Зубы ведут счёт.</p>'
-  },
-  {
-    html: '<h2>В 1985 году детский психиатр Ричард Гарднер описал механизм.</h2><p>Ребёнка индуцируют в роль «хорошего» — и он начинает отчуждать в себе и вовне всё, что противоречит этой роли. Это не выбор ребёнка. Но во взрослом возрасте это становится его личным проклятием. И его зубы будут об этом кричать.</p>'
-  },
-  {
-    html: '<h2>Посмотри на свои передние зубы.</h2><p>Они отражают не то, как ты чистишь зубы. Они отражают то, насколько ты стал собой. Верхний левый — история с мамой. Верхний правый — история с папой. Обе истории можно изменить. Но только если признать, что они есть.</p>'
-  },
-  {
-    html: '<h2>Тебе говорили, что зубы портятся от сладкого. <em>Это удобная ложь.</em></h2><p>Правда в том, что хроническое разрушение зубов связано с тем, кем тебе не дали стать. Интересно? Приходи и проверь.</p>'
-  }
-];
-const heroVariants = [
-  {
-    h1: 'Посмотри на передние зубы человека рядом. <em>Они расскажут тебе о его родителях больше, чем он сам.</em>',
-    sub: 'По зубам читается провал сепарации — и то, как ущербно будет чувствовать себя всю жизнь и какие отношения человек будет строить.'
-  },
-  {
-    h1: 'Виниры и коронки на передних зубах —<br>это не красота. <em>Это автопортрет.</em>',
-    sub: 'За ними стоит человек, который так и не сепарировался от родителей. Мы проверяли это с 2020 по 2026. Опровергнуть не получилось.'
-  },
-  {
-    h1: 'Зубы портятся не от сладкого.',
-    sub: 'Иначе не было бы детей, которые жрут что попало, не чистят зубы и у них всё ок. Первопричина любых деструкций — в запрете на неудобное поведение. Удобным зубы не нужны.'
-  },
-  {
-    h1: 'Посмотри на зубы своих детей. <em>Это твой портрет.</em>',
-    sub: 'Провал сепарации передаётся. Не генетически — через то, как ты с ними и кого винишь у них на глазах. Детский стоматолог, знакомый с психостоматологией, видит всё что происходит у тебя в семье.'
-  },
-  {
-    h1: 'Зубы партнёра расскажут тебе, чего от него ждать. <em>До того, как он сам это поймёт.</em>',
-    sub: 'Проблемы с зубами — это маркер проблем в отношениях. И карта того, как тобой можно манипулировать.'
-  },
-  {
-    h1: 'Ты чистишь зубы каждый день. Они всё равно портятся. <em>Задумывался почему?</em>',
-    sub: 'Зубы не врут о том, кем ты стал — и кем тебе не дали стать.'
-  },
-  {
-    h1: 'Передние зубы с пломбой/коронкой/винирами? <em>Это не «не повезло с генетикой».</em>',
-    sub: 'Это конкретный провал сепарации с последствиями во всех областях жизни. Психологи называют это «эмоциональный инцест». За каждым зубом разные люди, разные стратегии. <a href="https://psyteeth.github.io/hi/" style="color:var(--rust-light);">Приходи на диагностику →</a>'
-  },
-  {
-    h1: 'Хочешь понять человека — посмотри на его зубы. <em>Хочешь понять себя — на свои.</em>',
-    sub: 'За каждым передним резцом под виниром или коронкой стоит история о родительском эмоциональном насилии.'
-  },
-  {
-    h1: 'Стоматолог говорит: меньше сладкого. Психостоматолог говорит: <em>нет проблем в сепарации — нет проблем с зубами.</em>',
-    sub: 'Пока не отсепарируешься — хоть меньше горького ешь, разрушение будет продолжаться. Первопричина проблем с зубами — в провале сепарации. Мы наблюдаем это с 2020 года.'
-  }
-];
-const heroRightVariants = [
-  {
-    html: '<h2>Сепарация — это не про то, что ты съехал от родителей.</h2><p>Это про то, можешь ли ты при маме смеяться над её убеждениями. Можешь ли при папе провалиться — и не умереть от стыда.</p><p>Большинство — не могут. Зубы об этом знают.</p><p><strong>Верхний левый резец — мама. Верхний правый — папа.</strong></p>'
-  },
-  {
-    html: '<h2>Сепарация провалена — это не диагноз. <em>Это западло.</em></h2><p>Твоё личное. Каждый день. В решениях, в партнёрах, в деньгах.</p><p>И в зубах — особенно в передних.</p><p><strong>Зуб 21 — западло с мамой. Зуб 11 — западло с папой.</strong></p>'
-  },
-  {
-    html: '<h2>Чьим одобрением ты до сих пор живёшь?</h2><p>Если с передними резцами были вмешательства стоматолога — сепарация провалена.</p><p>Это будет проявляться в поведении, в выборе партнёров, в реализации.</p><p><strong>Верхний левый — провал сепарации с мамой. Верхний правый — провал сепарации с папой.</strong></p>'
-  },
-  {
-    html: '<h2>Тебя когда-то научили быть удобным. <em>Не собой — хорошим, сильным, правильным, нужным, значимым, умным.</em></h2><p>Для мамы. Для папы. Иногда для обоих сразу.</p><p>С тех пор ты живёшь чужим «правильно» и постоянно недотягиваешь.</p><p><strong>Передний левый зуб — с мамой. Передний правый зуб — с папой.</strong></p>'
-  },
-  {
-    html: '<h2>Ты выбираешь партнёров, которые чем-то похожи на одного из родителей.</h2><p>Это не случайность — это незавершённая сепарация. Твоя природа будет тянуть тебя её завершить.</p><p>Стоматологические вмешательства на передних резцах — всегда провал сепарации.</p><p><strong>Левый резец — мама запретила быть собой. Правый резец — папа запретил быть собой.</strong></p>'
-  },
-  {
-    html: '<h2>Сепарация — это момент, когда ты можешь поржать над манипуляциями близкого, а не вестись на них.</h2><p>У большинства этот момент так и не наступил.</p><p>Они подстраиваются — и зубы это фиксируют.</p><p><strong>Верхний левый резец — подстройка под манипулирующую маму. Верхний правый — подстройка под манипулирующего папу.</strong></p>'
-  },
-  {
-    html: '<h2>Ты не боишься, что тебя бросят. <em>Ты боишься уйти сам.</em></h2><p>Это и есть незавершённая сепарация.</p><p>Она живёт в теле. В поведении. В передних зубах.</p><p><strong>Зуб 21 — мама. Зуб 11 — папа.</strong></p>'
-  },
-  {
-    html: '<h2>Пока ты ищешь хорошего стоматолога — зубы продолжают разрушаться.</h2><p>Потому что причина не в эмали и минералах. Она в том, чьим одобрением ты живёшь.</p><p>Передние зубы — самый честный ответ на этот вопрос.</p><p><strong>Зуб 21 — маминым одобрением. Зуб 11 — папиным одобрением.</strong></p>'
-  },
-  {
-    html: '<h2>Твоя незавершённая сепарация уже живёт <em>в зубах твоих детей.</em></h2><p>Не потому что плохая наследственность.</p><p>Потому что они видят, как ты живёшь чужую жизнь — и копируют.</p><p><strong>Левый резец — не могу ржать с мамой. Правый резец — не могу ржать с папой.</strong></p>'
-  }
-];
-(function() {
-  const vL = heroVariants[Math.floor(Math.random() * heroVariants.length)];
-  const vR = heroRightVariants[Math.floor(Math.random() * heroRightVariants.length)];
-  const vC = conceptVariants[Math.floor(Math.random() * conceptVariants.length)];
-  const v3 = card3Variants[Math.floor(Math.random() * card3Variants.length)];
-  const vA = aboutVariants[Math.floor(Math.random() * aboutVariants.length)];
-  document.getElementById('hero-h1').innerHTML = vL.h1;
-  document.getElementById('hero-sub').innerHTML = vL.sub;
-  document.getElementById('hero-right-body').innerHTML = vR.html;
-  document.getElementById('concept-body').innerHTML = vC.html;
-  document.getElementById('card3-body').innerHTML = v3.html;
-  document.getElementById('about-body').innerHTML = vA.html;
-})();
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function switchTab(tab) {
   document.querySelectorAll('.quiz-tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.quiz-panel').forEach(p => p.classList.remove('active'));
   document.getElementById('panel-' + tab).classList.add('active');
   event.target.classList.add('active');
 }
-
 function updateScore(tab) {
   const inputs = document.querySelectorAll('.' + (tab === 't21' ? 'q21' : 'q11'));
   let total = 0;
-  inputs.forEach(input => {
-    const val = Math.min(10, Math.max(0, parseInt(input.value) || 0));
-    total += val;
-  });
+  inputs.forEach(function(input) { total += Math.min(10, Math.max(0, parseInt(input.value) || 0)); });
   document.getElementById('score-' + tab).textContent = total;
   document.getElementById('bar-' + tab).style.width = total + '%';
 }
-
 function calculateScore(tab) {
   const inputs = document.querySelectorAll('.' + (tab === 't21' ? 'q21' : 'q11'));
   let total = 0;
-  inputs.forEach(input => {
-    total += Math.min(10, Math.max(0, parseInt(input.value) || 0));
-  });
-
+  inputs.forEach(function(input) { total += Math.min(10, Math.max(0, parseInt(input.value) || 0)); });
   document.getElementById('score-' + tab).textContent = total;
   document.getElementById('bar-' + tab).style.width = total + '%';
-
-  let heading, detail, color;
-
+  const interp = document.getElementById('interp-' + tab);
+  let heading, text, color;
   if (total <= 30) {
-    heading = 'Слабый паттерн или его отсутствие';
+    heading = 'Mild pattern (0-30)';
+    text = tab === 't21' ? 'Low scores on tooth 21 suggest the denigrated father pattern is not strongly active. This may indicate healthy identification with the father, or that the pattern has not yet surfaced consciously.' : 'Low scores on tooth 11 often hide behind a mask of strength. If the tooth is significantly damaged but the score is low, the pattern may be active but concealed by compensatory behavior.';
     color = 'var(--sage)';
-    detail = tab === 't21'
-      ? 'Низкие показатели по зубу 21 предполагают, что паттерн подчинения женщине выражен слабо. Это может означать здоровую сепарацию с матерью — или что паттерн ещё не осознан.'
-      : 'Низкие показатели по зубу 11 нередко маскируются маской силы. Если зуб серьёзно повреждён, а балл низкий — возможно, паттерн подчинения мужчине активен, но скрыт за компенсаторным поведением.';
   } else if (total <= 60) {
-    heading = 'Умеренный паттерн — стоит наблюдать';
-    color = '#D4A04A';
-    detail = tab === 't21'
-      ? 'Умеренный показатель указывает на присутствующий паттерн подчинения женщине. Вы можете испытывать периодические трудности с видимостью, самопредъявлением и ощущением права занимать место.'
-      : 'Умеренный показатель указывает на присутствующий паттерн подчинения мужчине. Вы можете замечать, что выглядите сильным, одновременно испытывая беспомощность в ситуациях, требующих самозащиты.';
+    heading = 'Moderate pattern (31-60)';
+    text = tab === 't21' ? 'A moderate score indicates an active pleasing pattern. You may experience recurring difficulty with visibility, self-assertion, and the feeling of having the right to take up space.' : 'A moderate score indicates an active suppression pattern. You may notice that you appear strong while experiencing helplessness in situations that require self-defense.';
+    color = 'var(--graphite)';
   } else {
-    heading = 'Выраженный паттерн — зуб, вероятно, серьёзно пострадал';
+    heading = 'Strong pattern (61-100)';
+    text = tab === 't21' ? 'A high score points to a deeply rooted denigrated father pattern. Shame around visibility, people-pleasing, and the felt absence of the right to exist fully are likely central themes. Tooth 21 damage is probably significant.' : 'A high score points to a deeply rooted denigrated mother pattern. The strength mask, freezing under confrontation, and hidden helplessness are likely defining features. Tooth 11 damage is probably significant.';
     color = 'var(--rust)';
-    detail = tab === 't21'
-      ? 'Высокий показатель указывает на глубоко укоренившийся паттерн подчинения женщине. Стыд за видимость, угождение и ощущение отсутствия права занимать место — вероятно, центральные темы вашей жизни. Разрушение зуба 21, скорее всего, значительное.'
-      : 'Высокий показатель указывает на глубоко укоренившийся паттерн подчинения мужчине. Маска силы, замирание при конфронтации и скрытая беспомощность — вероятно, центральные темы вашей жизни. Разрушение зуба 11, скорее всего, значительное.';
   }
-
-  document.getElementById('interp-' + tab).innerHTML =
-    '<h4 style="color:' + color + '">' + heading + '</h4><p>' + detail + '</p>';
-
-  const emailBlock = document.getElementById('panel-' + tab + '-email');
-  if (emailBlock) emailBlock.style.display = 'block';
-}
-
-function toothEgg() {
-  if (document.getElementById('tooth-easter')) return;
-  const msg = document.createElement('div');
-  msg.id = 'tooth-easter';
-  msg.textContent = 'первый среди лучших, лучший среди первых';
-  msg.style.cssText = 'position:fixed;bottom:32px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-mono);font-size:11px;letter-spacing:0.15em;color:var(--rust-light);opacity:0;transition:opacity 0.4s;pointer-events:none;z-index:9999;';
-  document.body.appendChild(msg);
-  requestAnimationFrame(() => msg.style.opacity = '1');
-  setTimeout(() => { msg.style.opacity = '0'; setTimeout(() => msg.remove(), 400); }, 3000);
-}
-
-
-function getTemplate(tab) {
-  const el = document.getElementById('email-template-' + tab);
-  return el ? el.textContent.trim() : '';
-}
-
-function sendTelegram(tab) {
-  const text = encodeURIComponent(getTemplate(tab));
-  window.open('https://t.me/psyteeth?text=' + text, '_blank');
-}
-
-function sendEmail(tab) {
-  const tooth = tab === 't21' ? '21' : '11';
-  const subject = encodeURIComponent('Результаты опросника — зуб ' + tooth);
-  const body = encodeURIComponent(getTemplate(tab));
-  window.open('mailto:psyteeth@gmail.com?subject=' + subject + '&body=' + body, '_blank');
+  interp.innerHTML = '<h4 style="color:' + color + '">' + heading + '</h4><p>' + detail + '</p>';
 }
 </script>
 </body>
